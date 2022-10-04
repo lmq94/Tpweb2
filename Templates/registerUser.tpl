@@ -1,12 +1,15 @@
 {include file="header.tpl"}
 
+
+
+
 <div class="container-md">
   <h3>Ingrese los siguientes datos para crear su usuario </h3>
 
   <form class="form-alta" action='insertar-usuario' method="POST">
     <div class="col-md-4">
       <label for="validationServer01" class="form-label">Usuario</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" name="username" value="" required>
+      <input type="text" class="form-control" id="validationServer01" name="username" value="" required>
     </div>
     <div class="col-md-4">
       <label for="exampleInputEmail1" class="form-label">Direccion E-mail</label>
@@ -30,6 +33,7 @@
     <button type="submit" class="btn btn-primary">Crear usuario</button>
   </form>
 </div>
+
 
 
 

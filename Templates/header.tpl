@@ -37,5 +37,5 @@
       </header>
 
       <!-- inicio main container -->
-      <main class="container">
+      <main class=container>
 

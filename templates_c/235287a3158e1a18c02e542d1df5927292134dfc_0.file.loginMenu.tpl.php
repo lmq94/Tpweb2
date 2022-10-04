@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-03 18:15:02
+/* Smarty version 4.2.1, created on 2022-10-04 16:11:50
   from 'C:\xampp\htdocs\Tpweb2\templates\loginMenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633b0a864a33a7_31273384',
+  'unifunc' => 'content_633c3f26001a70_83388880',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '235287a3158e1a18c02e542d1df5927292134dfc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\loginMenu.tpl',
-      1 => 1664813699,
+      1 => 1664892703,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_633b0a864a33a7_31273384 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633c3f26001a70_83388880 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -31,7 +31,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
 
 
-<div class="login">
+<div class=login>
     <form class="mb-3" action=verify method="POST">
     <h2 class="titulo-login"> Bienvenido </h2>
         <div class="mb-4">

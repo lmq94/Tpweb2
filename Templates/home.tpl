@@ -1,7 +1,10 @@
 
 {include file="header.tpl"}
 
-    <div class="container" action="home">
+
+
+    <div class="container-fluid">
+        <div class="container" action="home">
         <div class="card" >
             <img src="./Images/cuenta.jpg" class="card-img-top" alt="cuenta">
             <div class="card-body">
@@ -19,7 +22,8 @@
             </div>
         </div>
     </div>
-    
- 
- {include file="footer.tpl"}
+   
 
+
+
+{include file="footer.tpl"}

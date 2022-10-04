@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-03 17:57:22
+/* Smarty version 4.2.1, created on 2022-10-04 15:52:45
   from 'C:\xampp\htdocs\Tpweb2\templates\registerUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633b0662138677_66529553',
+  'unifunc' => 'content_633c3aada32802_57658370',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3cce08dbddf888a7c5b42dbbf0c5fe863b6d6669' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerUser.tpl',
-      1 => 1664812640,
+      1 => 1664891562,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_633b0662138677_66529553 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633c3aada32802_57658370 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+
+
+
 
 <div class="container-md">
   <h3>Ingrese los siguientes datos para crear su usuario </h3>
@@ -32,7 +35,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
   <form class="form-alta" action='insertar-usuario' method="POST">
     <div class="col-md-4">
       <label for="validationServer01" class="form-label">Usuario</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" name="username" value="" required>
+      <input type="text" class="form-control" id="validationServer01" name="username" value="" required>
     </div>
     <div class="col-md-4">
       <label for="exampleInputEmail1" class="form-label">Direccion E-mail</label>
@@ -56,6 +59,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
     <button type="submit" class="btn btn-primary">Crear usuario</button>
   </form>
 </div>
+
 
 
 
