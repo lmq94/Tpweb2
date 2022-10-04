@@ -12,8 +12,8 @@ class UserModel {
     function nuevoUsuario($username, $password, $email){
         $normal="normal";
         $userPassword = password_hash($password, PASSWORD_BCRYPT);
-        $query = $this->db->prepare("INSERT INTO user (username, Pass, email, rol) VALUES (?, ?, ?, ?)");
-        $query->execute([$username, $userPassword, $email,$normal]);
+        $query = $this->db->prepare("INSERT INTO user (username, Pass, email, rol) VALUES (?, ?, ?, ?)");  //creo la peticion
+        $query->execute([$username, $userPassword, $email,$normal]); //ejecuto peticion
 
         return $this->db->lastInsertId();
     }

@@ -29,6 +29,7 @@ class ControlerUser{
                 $this->model->nuevoUsuario($_POST['username'],$_POST['password'], $_POST['email']);
             }
         }
+        header('location:registrar-usuario');
     }
 
 
