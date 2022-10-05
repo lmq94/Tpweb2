@@ -30,13 +30,19 @@ class Helper {
 
     }
     
-    function getProps(){
+    public static function getAppProps(){
         session_start();
-        if (isset($_SESSION['logged'],$_SESSION['rol'])){ 
-            session_abort(); 
-            return [$_SESSION['usuario'],$_SESSION['rol']];}
-        else  {  
-            session_abort();
-            return ["anonimo","invitado"];}
-    }    
+        $props=[];
+        $props['islogged']= isset($_SESSION['logged']);
+        $props['username']= Isset($_SESSION['username'])? $_SESSION["nombre"]:"invitado";
+        //voy a necesitar mas cosas jaja
+
+
+
+        session_abort();
+        return $props;
+
+         
+    }
+
 }

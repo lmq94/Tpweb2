@@ -9,6 +9,7 @@ class UserView {
 
     public function __construct() {
         $this->smarty = new Smarty(); 
+        $this->smarty->display('props', Helper::getAppProps());
     }
 
 
@@ -28,6 +29,11 @@ class UserView {
 
    function showmeLogin(){
      $this->smarty->display('loginMenu.tpl');
+   }
+
+
+   function Home(){
+        $this->smarty->display('home.tpl');
    }
 
   

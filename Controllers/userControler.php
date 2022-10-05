@@ -8,13 +8,12 @@ require_once "./Helper/helper.php";
 class ControlerUser{
     private $model;
     private $view;
-    private $helper;
+
 
 
     public function __construct(){
         $this->model = new UserModel();
         $this->view  = new UserView();
-        $this->helper= new Helper();
     }
 
 
