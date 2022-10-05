@@ -18,7 +18,6 @@ footer p {
 }
 
 
-
 header, main {
     margin-bottom: 30px;
 }
@@ -29,19 +28,15 @@ header img {
 }
 
 
-.card{
-    width: 18rem;
-    justify-content: space-between;
+.d-flex{
+    justify-content: space-around 
 }
 
 
-.form-alta {
-    justify-content: space-around;
-}
 
 .container{
     margin-bottom:10px;
-    justify-content: space-around;
+
 }
 
 
@@ -52,11 +47,11 @@ header img {
 
 .login{
     display:flex;
-    justify-content: center;
+    justify-content:center;
 
 }
 
-.login img{
+img{
     max-width: 200px;
     max-height: 400px;
     margin-left: 50px;
@@ -65,4 +60,9 @@ header img {
 .form-alta{
     justify-items: center;
 }
+
+.card{
+    justify-content: space-between;
+}
+
 

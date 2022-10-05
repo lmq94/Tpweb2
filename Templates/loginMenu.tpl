@@ -5,7 +5,7 @@
 
 
 
-<div class=login>
+<div class="login">
     <form class="mb-3" action=verify method="POST">
     <h2 class="titulo-login"> Bienvenido </h2>
         <div class="mb-4">
@@ -29,9 +29,7 @@
     </form>
 
     <div class="col">
-        <div class="text-end">
             <img src="Images\logo-municipalidad-Gesell.jpeg" alt="foto-login">
-        </div>
     </div> 
 </div>
 
