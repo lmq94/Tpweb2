@@ -13,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    {foreach from=$Accounts item=$account}
+    {foreach from=$accounts item=$account}
         <tr>
         <td>{$account->id_cliente}</td>
         <td>{$account->amount}</td>

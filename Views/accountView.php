@@ -12,9 +12,9 @@ class AccountView {
 
 
 
-    function showAccounts($Accounts) {
+    function showAccounts($accounts) {
 
-        $this->smarty->assign('accounts', $Accounts);
+        $this->smarty->assign('accounts', $accounts);
 
         $this->smarty->display('AccountList.tpl');
     
