@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-06 03:11:23
+/* Smarty version 4.2.1, created on 2022-10-06 06:30:23
   from 'C:\xampp\htdocs\Tpweb2\templates\panel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633e2b3ba43dc6_92086938',
+  'unifunc' => 'content_633e59df99a676_20165801',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbb2076eb76d91b8c06cbf32b3b89e8362738c7f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\panel.tpl',
-      1 => 1665018682,
+      1 => 1665030148,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_633e2b3ba43dc6_92086938 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633e59df99a676_20165801 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="container p-3">
@@ -34,8 +34,8 @@ function content_633e2b3ba43dc6_92086938 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="offcanvas-body">
             <p>Perfil</p>
-            <a href="mostrar-cuentas"><p>Mostrar clientes</p></a>
-            <p>Mostrar cuentas</p>
+            <a href="mostrar-clientes"><p>Mostrar clientes</p></a>
+            <a href="mostrar-cuentas"><p>Mostrar cuentas</p></a>
             <p>Configuracion</p>
             <a href="cerrar-sesion"><button class="btn btn-primary">Cerrar sesion</button></a>
         </div>

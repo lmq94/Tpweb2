@@ -9,6 +9,15 @@ class AccountModel {
     }
 
 
+    public function  getBankaccounts(){
+        $query = $this->db->prepare("SELECT * FROM  account");
+        $query->execute();
+        $Accounts = $query->fetchall(PDO::FETCH_OBJ); 
+        
+        return $Accounts;
+    }
+
+
     public function getAllAccountsbyClient($id_client) {
         // 2. ejecuto la sentencia (2 subpasos)
         $query = $this->db->prepare("SELECT * FROM  account where account.id_account = $id_client");

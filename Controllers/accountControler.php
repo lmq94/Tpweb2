@@ -19,6 +19,11 @@ class ControlerAccount{
         $this->view->showAccounts($Accounts);
     }
 
+    public function bankAccounts() {
+        $Accounts = $this->model->getBankaccounts();
+        $this->view->showAccounts($Accounts);
+    }
+
 
     function addAccount() {
         // TODO: validar entrada de datos

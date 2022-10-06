@@ -6,7 +6,8 @@ class AccountView {
     private $smarty;
 
     public function __construct() {
-        $this->smarty = new Smarty(); 
+        $this->smarty = new Smarty();
+        $this->smarty->assign('props', Helper::getAppProps()); 
     }
 
 

@@ -59,8 +59,10 @@ header img {
     justify-items: center;
 }
 
-.card{
-    justify-content: space-between;
+.card img{
+    max-width: 200px;
+    max-height: 400px;
+    margin-left: 50px;
    
 }
 

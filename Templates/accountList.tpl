@@ -1,6 +1,9 @@
 {include file="header.tpl"}
 
-<table class="table">
+
+{include file="panel.tpl"}
+
+<table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">Numero de cliente</th>
@@ -12,10 +15,10 @@
   <tbody>
     {foreach from=$Accounts item=$account}
         <tr>
-        <td>{$Account->id_cliente}</td>
-        <td>{$Account->amount}</td>
-        <td>{$Account->type}</td>
-        <td>{$Account->coin}</td>
+        <td>{$account->id_cliente}</td>
+        <td>{$account->amount}</td>
+        <td>{$account->type}</td>
+        <td>{$account->coin}</td>
         <td> <a href='delete/{$account->id}' type='button' class='btn btn-danger'>Cerrar cuenta</a></td>
         </tr>
       {/foreach}

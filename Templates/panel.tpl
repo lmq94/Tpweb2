@@ -10,8 +10,8 @@
         </div>
         <div class="offcanvas-body">
             <p>Perfil</p>
-            <a href="mostrar-cuentas"><p>Mostrar clientes</p></a>
-            <p>Mostrar cuentas</p>
+            <a href="mostrar-clientes"><p>Mostrar clientes</p></a>
+            <a href="mostrar-cuentas"><p>Mostrar cuentas</p></a>
             <p>Configuracion</p>
             <a href="cerrar-sesion"><button class="btn btn-primary">Cerrar sesion</button></a>
         </div>
