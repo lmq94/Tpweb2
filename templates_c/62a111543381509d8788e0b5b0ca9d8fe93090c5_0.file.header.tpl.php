@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-06 03:10:49
-  from 'C:\xampp\htdocs\Tpweb2\templates\header.tpl' */
+/* Smarty version 4.2.1, created on 2022-10-05 23:54:20
+  from 'C:\xampp\htdocs\Tpweb2\Tpweb2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633e2b195196a7_67660374',
+  'unifunc' => 'content_633dfd0c269e36_15073526',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '14424e8e1dd422bff0c3e51df386a49ab66657fd' => 
+    '62a111543381509d8788e0b5b0ca9d8fe93090c5' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\header.tpl',
-      1 => 1665018589,
+      0 => 'C:\\xampp\\htdocs\\Tpweb2\\Tpweb2\\templates\\header.tpl',
+      1 => 1665006859,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_633e2b195196a7_67660374 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633dfd0c269e36_15073526 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,10 +51,8 @@ function content_633e2b195196a7_67660374 (Smarty_Internal_Template $_smarty_tpl)
                     <li class="nav-item">
                       <a class="nav-link" aria-current="page" href="">About</a>
                     </li>
-                    <?php if (!$_smarty_tpl->tpl_vars['props']->value['islogged']) {?>
-                      <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="menu-login">Login</a>
-                    <?php }?>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="menu-login">Login</a>
                     </li>
                   </ul>
                 </div>

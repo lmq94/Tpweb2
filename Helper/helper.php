@@ -33,8 +33,9 @@ class Helper {
     public static function getAppProps(){
         session_start();
         $props=[];
-        $props['islogged']= isset($_SESSION['logged']);
-        $props['username']= Isset($_SESSION['username'])? $_SESSION["nombre"]:"invitado";
+        $props['islogged']= isset($_SESSION['login']);
+        $props['username']= Isset($_SESSION['username'])? $_SESSION["username"]:"invitado";
+        
         //voy a necesitar mas cosas jaja
 
 

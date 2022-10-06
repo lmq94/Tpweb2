@@ -9,7 +9,7 @@ class UserView {
 
     public function __construct() {
         $this->smarty = new Smarty(); 
-        $this->smarty->display('props', Helper::getAppProps());
+        $this->smarty->assign('props', Helper::getAppProps());
     }
 
 

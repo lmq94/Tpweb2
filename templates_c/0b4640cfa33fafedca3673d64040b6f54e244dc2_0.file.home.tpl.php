@@ -1,13 +1,40 @@
+<?php
+/* Smarty version 4.2.1, created on 2022-10-06 02:44:20
+  from 'C:\xampp\htdocs\Tpweb2\templates\home.tpl' */
 
-{include file="header.tpl"}
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_633e24e48a6df0_46646602',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0b4640cfa33fafedca3673d64040b6f54e244dc2' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\home.tpl',
+      1 => 1665016847,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:panel.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_633e24e48a6df0_46646602 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 
 
    
             <div class="d-flex " action="home">
-                {if $props.islogged}
-                    {include file="panel.tpl"}
-                {else}
+                <?php if ($_smarty_tpl->tpl_vars['props']->value['islogged']) {?>
+                    <?php $_smarty_tpl->_subTemplateRender("file:panel.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+                <?php } else { ?>
                     <div class="card">
                             <img src="./Images/cuenta.jpg" class="card-img-top" alt="cuenta">
                             <div class="card-body">
@@ -24,11 +51,13 @@
                                 <a href="#" class="btn btn-primary">Comprar ahora</a>
                             </div>
                     </div>
-                {/if}
+                <?php }?>
                         
             </div>
     
 
 
 
-{include file="footer.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

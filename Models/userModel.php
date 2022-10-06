@@ -11,7 +11,7 @@ class UserModel {
 
     function nuevoUsuario($username, $password, $email){
         $normal="normal";
-        $userPassword = password_hash($password, PASSWORD_BCRYPT);
+        $userPassword = password_hash($password, PASSWORD_BCRYPT); //hASEHO PASS
         $query = $this->db->prepare("INSERT INTO user (username, Pass, email, rol) VALUES (?, ?, ?, ?)");  //creo la peticion
         $query->execute([$username, $userPassword, $email,$normal]); //ejecuto peticion
 

@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-
+{include file="panel.tpl"}
 
 <h1>Registrar cliente</h1>
 

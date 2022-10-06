@@ -39,20 +39,33 @@ class ControlerUser{
         $username= $_POST['email'];
         $password= $_POST['password'];
 
+        echo $password;
+
         $user= $this->model->getUserByUsername($username);
-         if(!empty($user) && password_verify($password, $user->pass)){
+         if($user && !password_verify($password, $user->pass)){
             session_start();
             $_SESSION['id_user']=$user->id_user;
             $_SESSION['username']=$user->username;
-            header('location: menu-login');
+            $_SESSION['login']=true;
+            header('location: home');
+            
          }
-         else
-            $this->view->showmeLogin("Login incorrecto");
+         else {
+            $this->view->showmeLogin();
+            echo "carreto puta";
+         }
     }
 
 
     function showHome(){
-        $this->view->home();
+        $this->view->Home();
+    }
+
+
+    function logout(){
+        session_start();
+        session_destroy();
+        header('location: home');
     }
 
                 
