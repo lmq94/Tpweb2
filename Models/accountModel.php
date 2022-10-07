@@ -1,11 +1,12 @@
 <?php
 
 
-class AccountModel {
-    private $db;
+require_once "./Models\MainModel.php";
+
+class AccountModel extends Model {
 
     public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;'.'dbname=tpweb2;charset=utf8', 'root', '');
+        parent::__construct();
     }
 
 

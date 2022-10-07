@@ -2,16 +2,15 @@
 
 require_once "./Models/clientModel.php";
 require_once "./Views/clientView.php";
+require_once "./Controllers/MainControler.php";
 
 
-class ControlerClient{
-    private $model;
-    private $view;
+class ControlerClient extends Controler{
+   
 
 
     public function __construct(){
-        $this->model = new ClientModel();
-        $this->view  = new ClientView();
+        parent::__construct(new ClientModel,new ClientView());
     }
     
     public function showClient() {

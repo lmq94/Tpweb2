@@ -1,14 +1,11 @@
 <?php
 
-require_once 'smarty-master/libs/Smarty.class.php';
+require_once "./Views/MainView.php";
 
-class ClientView {
-
-    private $smarty;
+class ClientView extends View {
 
     public function __construct() {
-        $this->smarty = new Smarty();
-        $this->smarty->assign('props', Helper::getAppProps());
+        parent::__construct();
     }
 
 

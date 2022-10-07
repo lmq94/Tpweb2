@@ -3,18 +3,15 @@
 require_once "./Models/userModel.php";
 require_once "./Views/userView.php";
 require_once "./Helper/helper.php";
+require_once "./Controllers/MainControler.php";
 
 
-class ControlerUser{
-    private $model;
-    private $view;
-
-
+class ControlerUser extends Controler{
 
     public function __construct(){
-        $this->model = new UserModel();
-        $this->view  = new UserView();
-    }
+
+            parent::__construct(new UserModel,new UserView());
+        }
 
 
     public function agregarUsuario(){

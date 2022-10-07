@@ -1,12 +1,13 @@
 <?php
 
+require_once "./Models\MainModel.php";
 
-class UserModel {
-    private $db;
+
+
+class UserModel extends Model{
 
     public function __construct() {
-        // 1. abro conexión a la DB
-        $this->db = new PDO('mysql:host=localhost;'.'dbname=tpweb2;charset=utf8', 'root', '');
+        parent::__construct();
     }
 
     function nuevoUsuario($username, $password, $email){
@@ -17,7 +18,6 @@ class UserModel {
 
         return $this->db->lastInsertId();
     }
-
 
     function getUserByUsername($username){
         $query = $this->db->prepare("SELECT* FROM user WHERE user.email =?");

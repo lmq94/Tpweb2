@@ -2,17 +2,15 @@
 
 require_once "./Models/accountModel.php";
 require_once "./Views/accountView.php";
+require_once "./Controllers/MainControler.php";
 
-
-class ControlerAccount{
-    private $model;
-    private $view;
+class ControlerAccount extends Controler{
+   
 
 
     public function __construct(){
-        $this->model = new AccountModel();
-        $this->view  = new AccountView();
-    }
+            parent::__construct(new AccountModel,new AccountView());
+        }
     
     public function showAccounts($id_client) {
         $Accounts = $this->model->getAllAccountsbyClient($id_client);
