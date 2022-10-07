@@ -13,7 +13,7 @@ class UserModel extends Model{
     function nuevoUsuario($username, $password, $email, $id_client){
         $normal="normal";
         $userPassword = password_hash($password, PASSWORD_BCRYPT); //hASEHO PASS
-        $query = $this->db->prepare("INSERT INTO user (id_client,username, Pass, email, rol) VALUES (?, ?, ?, ?, ?)");  //creo la peticion
+        $query = $this->db->prepare("INSERT INTO user (id_cliente, username, Pass, email, rol) VALUES (?, ?, ?, ?, ?)");  //creo la peticion
         $query->execute([$id_client,$username, $userPassword, $email,$normal]); //ejecuto peticion
 
         return $this->db->lastInsertId();

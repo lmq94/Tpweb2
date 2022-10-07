@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-10-2022 a las 00:23:07
+-- Tiempo de generación: 07-10-2022 a las 21:07:37
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -44,8 +44,8 @@ CREATE TABLE `account` (
 CREATE TABLE `client` (
   `id_client` int(11) NOT NULL,
   `dni` int(11) NOT NULL,
-  `alias` text NOT NULL,
-  `city` text NOT NULL
+  `alias` varchar(30) NOT NULL,
+  `city` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -53,7 +53,8 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`id_client`, `dni`, `alias`, `city`) VALUES
-(1, 41258326, 'Marcos', 'Gesell');
+(0, 38178273, 'Lucas', 'Tandil'),
+(1, 41258326, 'Carreto', 'Gesell');
 
 -- --------------------------------------------------------
 
@@ -63,8 +64,9 @@ INSERT INTO `client` (`id_client`, `dni`, `alias`, `city`) VALUES
 
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `pass` varchar(20) NOT NULL,
+  `pass` varchar(250) NOT NULL,
   `email` text NOT NULL,
   `rol` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -73,8 +75,9 @@ CREATE TABLE `user` (
 -- Volcado de datos para la tabla `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `pass`, `email`, `rol`) VALUES
-(0, 'Lucas', '$2y$10$aJ8KpZ05Yvf5p', 'quiroga9409@gmail.com', 'normal');
+INSERT INTO `user` (`id_user`, `id_cliente`, `username`, `pass`, `email`, `rol`) VALUES
+(8, 0, 'Lucas', '$2y$10$a4pDdQtUFe2p4Yupj1PcfeMmuwABr72AwUCXZQQAG2ubJLfTMRD8e', 'quiroga9409@gmail.com', 'admin'),
+(9, 1, 'Carretto', '$2y$10$A0usUMUTK.fcmOP.0FT/ZOnVeb0BKlE8i3ErqOPeFzSAZ1xMw1eH.', 'carretto_leonardo@gmail.com', 'normal');
 
 --
 -- Índices para tablas volcadas
@@ -97,7 +100,8 @@ ALTER TABLE `client`
 -- Indices de la tabla `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `id_cliente` (`id_cliente`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -107,7 +111,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
@@ -118,6 +122,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `account`
   ADD CONSTRAINT `account_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`);
+
+--
+-- Filtros para la tabla `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `fk_client` FOREIGN KEY (`id_cliente`) REFERENCES `client` (`id_client`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
