@@ -21,7 +21,7 @@ class Helper {
 
     function isLogged() {
         session_start();
-        if (!isset($_SESSION['IS_LOGGED'])) {
+        if (!isset($_SESSION['login'])) {
             header("Location: " . BASE_URL . 'menu-login');
             die();
         }

@@ -24,8 +24,8 @@ class ControlerUser extends Controler{
 
     function registro() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-            if (isset($_POST['username'],$_POST['password'], $_POST['email'])){
-                $this->model->nuevoUsuario($_POST['username'],$_POST['password'], $_POST['email']);
+            if (isset($_POST['username'],$_POST['password'], $_POST['email'], $_POST['id_user'])){
+                $this->model->nuevoUsuario($_POST['username'],$_POST['password'], $_POST['email'], $_POST['id_user']);
             }
         }
         header('location:registrar-usuario');

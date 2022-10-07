@@ -20,6 +20,11 @@
       <label for="exampleInputPassword1" class="form-label">Contraseña</label>
       <input type="password" class="form-control" id="exampleInputPassword1" name="password"  required>
     </div>
+    <div class="col-md-4">
+      <label for="exampleInputPassword1" class="form-label">Ingrese su id de cliente del banco</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" name="id_user"  required>
+      <p>Nota: Para poder abrir una cuenta de usuario, debe ser cliente del banco previamente </p>
+    </div>
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
