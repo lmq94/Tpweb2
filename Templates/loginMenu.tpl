@@ -23,6 +23,12 @@
         <div class="d-grid"> 
             <button type="submit" class="btn btn-primary">Iniciar sesion </button>
         </div>
+        {if $error} 
+            <div class="alert alert-danger mt-3">
+                {$error}
+            </div>
+        {/if}
+
         <div class="my-3"> 
             <span>No tenes cuenta? <a href="registrar-usuario"> Registrarse </a> </span>
         </div>

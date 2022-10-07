@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-04 23:23:38
+/* Smarty version 4.2.1, created on 2022-10-07 04:34:14
   from 'C:\xampp\htdocs\Tpweb2\templates\loginMenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633ca45aa286b0_19913974',
+  'unifunc' => 'content_633f9026a06f55_32226664',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '235287a3158e1a18c02e542d1df5927292134dfc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\loginMenu.tpl',
-      1 => 1664918617,
+      1 => 1665110043,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_633ca45aa286b0_19913974 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633f9026a06f55_32226664 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -49,6 +49,13 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         <div class="d-grid"> 
             <button type="submit" class="btn btn-primary">Iniciar sesion </button>
         </div>
+        <?php if ($_smarty_tpl->tpl_vars['error']->value) {?> 
+            <div class="alert alert-danger mt-3">
+                <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+
+            </div>
+        <?php }?>
+
         <div class="my-3"> 
             <span>No tenes cuenta? <a href="registrar-usuario"> Registrarse </a> </span>
         </div>

@@ -35,7 +35,7 @@ class Helper {
         $props=[];
         $props['islogged']= isset($_SESSION['login']);
         $props['username']= Isset($_SESSION['username'])? $_SESSION["username"]:"invitado";
-        
+        $props ['pass']=isset($_SESSION['login']);   
         //voy a necesitar mas cosas jaja
 
 

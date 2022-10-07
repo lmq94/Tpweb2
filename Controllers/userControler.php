@@ -31,13 +31,9 @@ class ControlerUser extends Controler{
         header('location:registrar-usuario');
     }
 
-
     function verifyUser(){
         $username= $_POST['email'];
         $password= $_POST['password'];
-
-        echo $password;
-
         $user= $this->model->getUserByUsername($username);
          if($user && !password_verify($password, $user->pass)){
             session_start();
@@ -48,16 +44,13 @@ class ControlerUser extends Controler{
             
          }
          else {
-            $this->view->showmeLogin();
-            echo "carreto puta";
+            $this->view->showmeLogin("la contraseña ingresada es incorrecta");
          }
     }
-
 
     function showHome(){
         $this->view->Home();
     }
-
 
     function logout(){
         session_start();

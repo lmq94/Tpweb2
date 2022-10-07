@@ -15,7 +15,6 @@ class UserView extends View {
         $this->smarty->assign('users', $Users);
 
         $this->smarty->display('UsersList.tpl');
-    
 
     }
 
@@ -24,8 +23,9 @@ class UserView extends View {
 
    }
 
-   function showmeLogin(){
-     $this->smarty->display('loginMenu.tpl');
+   function showmeLogin($error=null){
+    $this->smarty->assign("error", $error);
+    $this->smarty->display('loginMenu.tpl');
    }
 
 
