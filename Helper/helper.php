@@ -21,12 +21,10 @@ class Helper {
 
     function isLogged() {
         session_start();
-        if ( isset($_SESSION['logged'])){   
-            session_abort(); 
-            return true;}
-        else {  
-            session_abort();
-            return false;}
+        if (!isset($_SESSION['IS_LOGGED'])) {
+            header("Location: " . BASE_URL . 'menu-login');
+            die();
+        }
 
     }
     

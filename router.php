@@ -16,10 +16,9 @@ if (!empty($_GET['action'])) {
 // parsea la accion 
 $params = explode('/', $action);
 
-// instancio el unico controller que existe por ahora
-$clientControler = new ControlerClient();
+// instancio aca el unico controller que funcionalidades que no requieren logeo
+
 $userControler = new ControlerUser();
-$accountControler = new ControlerAccount();
 
 // tabla de ruteo
 switch ($params[0]) {
@@ -42,9 +41,11 @@ switch ($params[0]) {
         $userControler->logout();
         break;
     case 'mostrar-clientes':
+        $clientControler = new ControlerClient();
         $clientControler->showClient();
         break;
     case 'mostrar-cuentas':
+        $accountControler = new ControlerAccount();
         $accountControler->bankAccounts();
         break;
     default:

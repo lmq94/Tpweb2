@@ -35,7 +35,7 @@ class ControlerUser extends Controler{
         $username= $_POST['email'];
         $password= $_POST['password'];
         $user= $this->model->getUserByUsername($username);
-         if($user && !password_verify($password, $user->pass)){
+         if($user && password_verify($password, $user->pass)){
             session_start();
             $_SESSION['id_user']=$user->id_user;
             $_SESSION['username']=$user->username;

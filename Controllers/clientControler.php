@@ -3,6 +3,7 @@
 require_once "./Models/clientModel.php";
 require_once "./Views/clientView.php";
 require_once "./Controllers/MainControler.php";
+require_once "./Helper/helper.php";
 
 
 class ControlerClient extends Controler{
@@ -11,11 +12,16 @@ class ControlerClient extends Controler{
 
     public function __construct(){
         parent::__construct(new ClientModel,new ClientView());
+        $helper = new Helper();
+        $helper->isLogged();
+
+    
     }
     
     public function showClient() {
         $clients = $this->model->getAllClient();
         $this->view->showClients($clients);
+        
     }
 
 

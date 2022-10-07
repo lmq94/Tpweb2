@@ -3,6 +3,7 @@
 require_once "./Models/accountModel.php";
 require_once "./Views/accountView.php";
 require_once "./Controllers/MainControler.php";
+require_once "./Helper/helper.php";
 
 class ControlerAccount extends Controler{
    
@@ -10,6 +11,7 @@ class ControlerAccount extends Controler{
 
     public function __construct(){
             parent::__construct(new AccountModel,new AccountView());
+
         }
     
     public function showAccounts($id_client) {
