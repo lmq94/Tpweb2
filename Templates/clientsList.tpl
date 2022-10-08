@@ -5,7 +5,7 @@
     {include file="panel.tpl"}
 
       <div class="container ">
-        <h3>Datos de los clientes registrados en el banco </h3>
+        <h3>Clientes registrados en el banco </h3>
 
           <table class="table table-bordered">
             <thead>

@@ -21,7 +21,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Compra dolares</h5>
                                 <p class="card-text">Ahorraste todo el año, pero con la inflacion ahora no te alcanza ni para un caramelo? Pasa tus ahorros a dolares ahora mismo, el arbolito numero 1 de Gesell  ahora trabaja para nosotros!</p>
-                                <a href="#" class="btn btn-primary">Comprar ahora</a>
+                                <a href='menu-login' class="btn btn-primary">Comprar ahora</a>
                             </div>
                     </div>
                 {/if}

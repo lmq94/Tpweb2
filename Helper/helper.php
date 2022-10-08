@@ -6,17 +6,19 @@ class Helper {
         
     }
 
-    function checkAdmin () {
-        session_start();
-        if ($_SESSION['logged']){
-            if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') 
-                { session_abort(); return true;}
-            else { 
+     public static function checkAdmin () {
+        if ($_SESSION['login']){
+            if (isset($_SESSION['rol']) && $_SESSION['rol'] == "admin") 
+                { session_abort(); 
+                return true;}
+            else {
                 session_abort();
                 return false;}
         }
-        else {  session_abort(); 
-                return false;}
+        else {  
+            echo "ramera";
+            session_abort(); 
+            return false;}
     }
 
     function isLogged() {
@@ -33,7 +35,7 @@ class Helper {
         $props=[];
         $props['islogged']= isset($_SESSION['login']);
         $props['username']= Isset($_SESSION['username'])? $_SESSION["username"]:"invitado";
-        $props ['pass']=isset($_SESSION['login']);   
+        $props ['pass']=isset($_SESSION['login']); 
         //voy a necesitar mas cosas jaja
 
 

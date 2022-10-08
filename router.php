@@ -48,6 +48,11 @@ switch ($params[0]) {
         $accountControler = new ControlerAccount();
         $accountControler->bankAccounts();
         break;
+    case 'Cuentas-cliente':
+        $accountControler = new ControlerAccount();
+        $id_client= $params[1];
+        $accountControler->showAccounts($id_client);
+        break;
     default:
         echo('404 Page not found');
         break;

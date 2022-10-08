@@ -21,8 +21,8 @@ class AccountModel extends Model {
 
     public function getAllAccountsbyClient($id_client) {
         // 2. ejecuto la sentencia (2 subpasos)
-        $query = $this->db->prepare("SELECT * FROM  account where account.id_account = $id_client");
-        $query->execute();
+        $query = $this->db->prepare("SELECT * FROM  account where account.id_client = ?");
+        $query->execute([$id_client]);
 
         // 3. obtengo los resultados
         $Accounts = $query->fetchall(PDO::FETCH_OBJ); // devuelve un arreglo de objetos
@@ -33,8 +33,8 @@ class AccountModel extends Model {
 
 
     public function CreateAccount($dni, $alias, $city, $id_client) {
-        $query = $this->db->prepare("INSERT INTO client (dni, alias, city, id_client) VALUES (?, ?, ?, ?)");
-        $query->execute([$dni, $alias, $city, $id_client]);
+        $query = $this->db->prepare("INSERT INTO client (id_client, dni, alias, city) VALUES (?, ?, ?, ?)");
+        $query->execute([$id_client, $dni, $alias, $city]);
 
         return $this->db->lastInsertId();
     }

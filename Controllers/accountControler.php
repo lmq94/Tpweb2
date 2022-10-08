@@ -20,8 +20,10 @@ class ControlerAccount extends Controler{
     }
 
     public function bankAccounts() {
-        $Accounts = $this->model->getBankaccounts();
-        $this->view->showAccounts($Accounts);
+        if(helper::checkAdmin ()){
+            $Accounts = $this->model->getBankaccounts();
+            $this->view->showAccounts($Accounts);
+        }
     }
 
 

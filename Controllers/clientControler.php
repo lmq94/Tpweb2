@@ -19,9 +19,10 @@ class ControlerClient extends Controler{
     }
     
     public function showClient() {
-        $clients = $this->model->getAllClient();
-        $this->view->showClients($clients);
-        
+        if(helper::checkAdmin ()){
+            $clients = $this->model->getAllClient();
+            $this->view->showClients($clients);
+        }
     }
 
 

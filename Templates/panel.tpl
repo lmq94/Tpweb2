@@ -10,8 +10,12 @@
         </div>
         <div class="offcanvas-body">
             <p>Perfil</p>
-            <a href="mostrar-clientes"><p>Mostrar clientes</p></a>
-            <a href="mostrar-cuentas"><p>Mostrar cuentas</p></a>
+                {if $smarty.session.rol=="admin"}
+                <a href="mostrar-clientes"><p>Mostrar clientes</p></a>
+                <a href="mostrar-cuentas"><p>Mostrar cuentas</p></a>
+            {else}
+                <a href='Cuentas-cliente/{$smarty.session.id_client}'> <p>Tus cuentas</p></a>
+            {/if}
             <p>Configuracion</p>
             <a href="cerrar-sesion"><button class="btn btn-primary">Cerrar sesion</button></a>
         </div>

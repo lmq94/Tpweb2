@@ -1,8 +1,6 @@
 {include file="header.tpl" props=$props}
 
 
-
-
 <div class="container-md">
   <h3>Ingrese los siguientes datos para crear su usuario </h3>
 
@@ -28,7 +26,7 @@
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
+        Acepto los terminos y condiciones
       </label>
       <div class="invalid-feedback">
         You must agree before submitting.

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-06 02:44:20
+/* Smarty version 4.2.1, created on 2022-10-08 00:04:46
   from 'C:\xampp\htdocs\Tpweb2\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633e24e48a6df0_46646602',
+  'unifunc' => 'content_6340a27e982b60_31649860',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b4640cfa33fafedca3673d64040b6f54e244dc2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\home.tpl',
-      1 => 1665016847,
+      1 => 1665180284,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_633e24e48a6df0_46646602 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6340a27e982b60_31649860 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -48,7 +48,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                             <div class="card-body">
                                 <h5 class="card-title">Compra dolares</h5>
                                 <p class="card-text">Ahorraste todo el año, pero con la inflacion ahora no te alcanza ni para un caramelo? Pasa tus ahorros a dolares ahora mismo, el arbolito numero 1 de Gesell  ahora trabaja para nosotros!</p>
-                                <a href="#" class="btn btn-primary">Comprar ahora</a>
+                                <a href='menu-login' class="btn btn-primary">Comprar ahora</a>
                             </div>
                     </div>
                 <?php }?>
