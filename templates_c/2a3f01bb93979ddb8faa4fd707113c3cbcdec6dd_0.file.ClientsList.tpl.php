@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-07 23:10:16
+/* Smarty version 4.2.1, created on 2022-10-10 19:06:14
   from 'C:\xampp\htdocs\Tpweb2\templates\ClientsList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634095b802f0a3_95705145',
+  'unifunc' => 'content_634451063656f9_33743377',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a3f01bb93979ddb8faa4fd707113c3cbcdec6dd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\ClientsList.tpl',
-      1 => 1665177013,
+      1 => 1665413021,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634095b802f0a3_95705145 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634451063656f9_33743377 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -58,7 +58,7 @@ $_smarty_tpl->tpl_vars['client']->do_else = false;
 </td>
                   <td><?php echo $_smarty_tpl->tpl_vars['client']->value->city;?>
 </td>
-                  <td> <a href='delete/<?php echo $_smarty_tpl->tpl_vars['client']->value->id;?>
+                  <td> <a href='delete-client/<?php echo $_smarty_tpl->tpl_vars['client']->value->id_client;?>
 ' type='button' class='btn btn-danger'>Eliminar cliente</a></td>
                   </tr>
                 <?php

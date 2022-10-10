@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-08 00:05:46
+/* Smarty version 4.2.1, created on 2022-10-10 21:31:07
   from 'C:\xampp\htdocs\Tpweb2\templates\registerUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6340a2ba61ced0_63966842',
+  'unifunc' => 'content_634472fbd66bd9_14590633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3cce08dbddf888a7c5b42dbbf0c5fe863b6d6669' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerUser.tpl',
-      1 => 1665180343,
+      1 => 1665430129,
       2 => 'file',
     ),
   ),
@@ -22,11 +22,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6340a2ba61ced0_63966842 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634472fbd66bd9_14590633 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('props'=>$_smarty_tpl->tpl_vars['props']->value), 0, false);
 ?>
-
-
 
 
 <div class="container-md">
@@ -47,7 +45,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
       <input type="password" class="form-control" id="exampleInputPassword1" name="password"  required>
     </div>
     <div class="col-md-4">
-      <label for="exampleInputPassword1" class="form-label">Ingrese su id de cliente del banco</label>
+      <label for="exampleInputPassword1" class="form-label">Ingrese su id de cliente en el banco</label>
       <input type="number" class="form-control" id="exampleInputPassword1" name="id_user"  required>
       <p>Nota: Para poder abrir una cuenta de usuario, debe ser cliente del banco previamente </p>
     </div>

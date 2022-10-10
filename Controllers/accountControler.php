@@ -15,8 +15,10 @@ class ControlerAccount extends Controler{
         }
     
     public function showAccounts($id_client) {
-        $Accounts = $this->model->getAllAccountsbyClient($id_client);
-        $this->view->showAccounts($Accounts);
+        if(Helper::verify($id_client)){
+            $Accounts = $this->model->getAllAccountsbyClient($id_client);
+            $this->view->showAccounts($Accounts);
+        }
     }
 
     public function bankAccounts() {
@@ -26,24 +28,43 @@ class ControlerAccount extends Controler{
         }
     }
 
+    function accountForm(){
+        $this->view->showForm();
+    }
+
 
     function addAccount() {
         // TODO: validar entrada de datos
-        $id_client = $_POST['id_client'];
-        $dni = $_POST['dni'];
-        $alias = $_POST['alias'];
-        $city = $_POST['city'];
+        if(helper::checkAdmin ()){
+            $id_client =$_POST['id_client'];
+        }
+        else {$id_client = $_SESSION['id_client'];
+        }
 
-        $this->model->CreateAccount($dni, $alias, $city, $id_client);
+        $amount = $_POST['amount'];
+        $type_account = $_POST['type_account'];
+        $coin = $_POST['coin'];
 
-        header("Location: " . BASE_URL); 
+        $this->model->CreateAccount($id_client, $amount,$type_account, $coin);
+        $this->redirigir( $id_client);
     }
 
+        
+
+    function redirigir($id){
+        if(helper::checkAdmin ())
+            header("Location: " . BASE_URL . "show-accounts");
+        else
+            header("Location: " . BASE_URL . "client-accounts/$id"); 
+    }
+
+    
 
 
     function deleteAccount($id) {
         $this->model->deleteAccountId($id);
-        header("Location: " . BASE_URL);
+        $id_client= $_SESSION['id_client'];
+        $this->redirigir($id_client);
     }
 
 

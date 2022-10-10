@@ -1,16 +1,44 @@
-{include file="header.tpl"}
+<?php
+/* Smarty version 4.2.1, created on 2022-10-10 20:49:12
+  from 'C:\xampp\htdocs\Tpweb2\templates\registerAccount.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_6344692829b870_32361824',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '14814bc0d3b760be782598fe629af328885a6e87' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerAccount.tpl',
+      1 => 1665427622,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:panel.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_6344692829b870_32361824 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 
-        {include file="panel.tpl"}
+        <?php $_smarty_tpl->_subTemplateRender("file:panel.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 
         <form class="container-md" action="open-account" method="POST">
-            {if $smarty.session.rol=="admin"}
+            <?php if ($_SESSION['rol'] == "admin") {?>
                 <div class="col-md-4">
                     <label for="exampleInputPassword1" class="form-label"> <h4>Ingrese el id del cliente</h4></label>
                     <input type="number" class="form-control" id="exampleInputPassword1" value="" name="id_client">
                 </div>
-            {/if}
+            <?php }?>
 
             <div class="col-md-4">
                 <label for="exampleInputPassword1" class="form-label"> <h4>Ingrese el monto inicial (opcional)</h4></label>
@@ -59,4 +87,6 @@
   
 
 
-{include file="footer.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

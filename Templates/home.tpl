@@ -8,7 +8,7 @@
                 {if $props.islogged}
                     {include file="panel.tpl"}
                 {else}
-                    <div class="card">
+                    <div class="card m-3">
                             <img src="./Images/cuenta.jpg" class="card-img-top" alt="cuenta">
                             <div class="card-body">
                                 <h5 class="card-title">Abri tu primer cuenta gratis!</h5>
@@ -16,7 +16,7 @@
                                 <a href="registrar-usuario" class="btn btn-primary">Registrate</a>
                             </div>
                     </div>
-                    <div class="card" >
+                    <div class="card m-3" >
                             <img src="./Images/dolares.png" class="card-img-top" alt="dolares">
                             <div class="card-body">
                                 <h5 class="card-title">Compra dolares</h5>

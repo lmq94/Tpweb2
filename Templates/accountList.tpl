@@ -26,14 +26,20 @@
           <tr>
           <td>{$account->id_client}</td>
           <td>{$account->amount}</td>
-          <td>{$account->type}</td>
+          <td>{$account->type_account}</td>
           <td>{$account->coin}</td>
-          <td> <a href='delete/{$account->id}' type='button' class='btn btn-danger'>Cerrar cuenta</a></td>
+          <td> <a href='delete-account/{$account->id_account}' type='button' class='btn btn-danger'>Cerrar cuenta</a></td>
           </tr>
         {/foreach}
     </tbody>
   </table>
+
+    <a href='register-account' type='button' class="btn btn-success mx-3 mt-3 m-3">Abrir una cuenta</a>
+    <a href='' type='button' class="btn btn-success mx-3 mt-3 m-3">Editar una cuenta</a>
 </div>
+
+
+
 
 
 {include file="footer.tpl"}

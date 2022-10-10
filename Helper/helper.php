@@ -16,7 +16,6 @@ class Helper {
                 return false;}
         }
         else {  
-            echo "ramera";
             session_abort(); 
             return false;}
     }
@@ -28,6 +27,15 @@ class Helper {
             die();
         }
 
+    }
+
+
+
+    public static function verify($id){
+        if ($id==$_SESSION['id_client'])
+            return true;
+        else
+            return false;
     }
     
     public static function getAppProps(){

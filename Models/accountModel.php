@@ -1,7 +1,7 @@
 <?php
 
 
-require_once "./Models\MainModel.php";
+require_once "./Models/MainModel.php";
 
 class AccountModel extends Model {
 
@@ -20,11 +20,8 @@ class AccountModel extends Model {
 
 
     public function getAllAccountsbyClient($id_client) {
-        // 2. ejecuto la sentencia (2 subpasos)
         $query = $this->db->prepare("SELECT * FROM  account where account.id_client = ?");
         $query->execute([$id_client]);
-
-        // 3. obtengo los resultados
         $Accounts = $query->fetchall(PDO::FETCH_OBJ); // devuelve un arreglo de objetos
         
         return $Accounts;
@@ -32,16 +29,16 @@ class AccountModel extends Model {
 
 
 
-    public function CreateAccount($dni, $alias, $city, $id_client) {
-        $query = $this->db->prepare("INSERT INTO client (id_client, dni, alias, city) VALUES (?, ?, ?, ?)");
-        $query->execute([$id_client, $dni, $alias, $city]);
+    public function CreateAccount( $id_client, $amount, $type_account, $coin) {
+        $query = $this->db->prepare("INSERT INTO account (id_client, amount, type_account, coin) VALUES (?, ?, ?, ?)");
+        $query->execute([$id_client, $amount, $type_account, $coin]);
 
         return $this->db->lastInsertId();
     }
 
 
     function deleteAccountId($id) {
-        $query = $this->db->prepare('DELETE FROM account WHERE id_cuenta = ?');
+        $query = $this->db->prepare('DELETE FROM account WHERE id_account = ?');
         $query->execute([$id]);
     }
 

@@ -9,6 +9,11 @@ class AccountView extends View{
         parent::__construct();
     }
 
+
+    function showForm(){
+        $this->smarty->display('registerAccount.tpl');
+    }
+
     function showAccounts($accounts) {
 
         $this->smarty->assign('accounts', $accounts);

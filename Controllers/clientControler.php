@@ -42,7 +42,7 @@ class ControlerClient extends Controler{
 
     function deleteClient($id) {
         $this->model->deleteClientById($id);
-        header("Location: " . BASE_URL);
+        header("Location: " . BASE_URL. "show-clients");
     }
 
 

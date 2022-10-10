@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-08 00:04:46
+/* Smarty version 4.2.1, created on 2022-10-10 19:04:58
   from 'C:\xampp\htdocs\Tpweb2\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6340a27e982b60_31649860',
+  'unifunc' => 'content_634450ba031439_27933722',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b4640cfa33fafedca3673d64040b6f54e244dc2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\home.tpl',
-      1 => 1665180284,
+      1 => 1665421496,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6340a27e982b60_31649860 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634450ba031439_27933722 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -35,7 +35,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                     <?php $_smarty_tpl->_subTemplateRender("file:panel.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
                 <?php } else { ?>
-                    <div class="card">
+                    <div class="card m-3">
                             <img src="./Images/cuenta.jpg" class="card-img-top" alt="cuenta">
                             <div class="card-body">
                                 <h5 class="card-title">Abri tu primer cuenta gratis!</h5>
@@ -43,7 +43,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                                 <a href="registrar-usuario" class="btn btn-primary">Registrate</a>
                             </div>
                     </div>
-                    <div class="card" >
+                    <div class="card m-3" >
                             <img src="./Images/dolares.png" class="card-img-top" alt="dolares">
                             <div class="card-body">
                                 <h5 class="card-title">Compra dolares</h5>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-07 23:26:26
+/* Smarty version 4.2.1, created on 2022-10-10 19:48:44
   from 'C:\xampp\htdocs\Tpweb2\templates\AccountList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634099829586d6_56076227',
+  'unifunc' => 'content_63445afccf1c86_23267358',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '085bbdc9942dc84874eda9ed2165be749b0b3c79' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\AccountList.tpl',
-      1 => 1665177981,
+      1 => 1665422111,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634099829586d6_56076227 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63445afccf1c86_23267358 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -61,11 +61,11 @@ $_smarty_tpl->tpl_vars['account']->do_else = false;
 </td>
           <td><?php echo $_smarty_tpl->tpl_vars['account']->value->amount;?>
 </td>
-          <td><?php echo $_smarty_tpl->tpl_vars['account']->value->type;?>
+          <td><?php echo $_smarty_tpl->tpl_vars['account']->value->type_account;?>
 </td>
           <td><?php echo $_smarty_tpl->tpl_vars['account']->value->coin;?>
 </td>
-          <td> <a href='delete/<?php echo $_smarty_tpl->tpl_vars['account']->value->id;?>
+          <td> <a href='delete-account/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
 ' type='button' class='btn btn-danger'>Cerrar cuenta</a></td>
           </tr>
         <?php
@@ -73,7 +73,13 @@ $_smarty_tpl->tpl_vars['account']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </tbody>
   </table>
+
+    <a href='register-account' type='button' class="btn btn-success mx-3 mt-3 m-3">Abrir una cuenta</a>
+    <a href='' type='button' class="btn btn-success mx-3 mt-3 m-3">Editar una cuenta</a>
 </div>
+
+
+
 
 
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

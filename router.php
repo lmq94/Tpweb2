@@ -16,7 +16,7 @@ if (!empty($_GET['action'])) {
 // parsea la accion 
 $params = explode('/', $action);
 
-// instancio aca el unico controller que funcionalidades que no requieren logeo
+// instancio aca el unico controller que tiene funcionalidades que no requieren logeo
 
 $userControler = new ControlerUser();
 
@@ -37,21 +37,39 @@ switch ($params[0]) {
     case 'verify':
         $userControler->verifyUser();
         break;
-    case 'cerrar-sesion':
+    case 'close-sesion':
         $userControler->logout();
         break;
-    case 'mostrar-clientes':
+    case 'show-clients':
         $clientControler = new ControlerClient();
         $clientControler->showClient();
         break;
-    case 'mostrar-cuentas':
+    case 'delete-cliente':
+        $clientControler = new ControlerClient();
+        $id_client= $params[1];
+        $clientControler->deleteClient($id);
+        break;
+    case 'show-accounts':
         $accountControler = new ControlerAccount();
         $accountControler->bankAccounts();
         break;
-    case 'Cuentas-cliente':
+    case 'client-accounts':
         $accountControler = new ControlerAccount();
         $id_client= $params[1];
         $accountControler->showAccounts($id_client);
+        break;
+    case 'register-account':
+        $accountControler = new ControlerAccount();
+        $accountControler->accountForm();
+        break;
+    case 'open-account':
+        $accountControler = new ControlerAccount();
+        $accountControler->addAccount();
+        break;
+    case 'delete-account':
+        $accountControler = new ControlerAccount();
+        $id_account= $params[1];
+        $accountControler->deleteAccount($id_account);
         break;
     default:
         echo('404 Page not found');

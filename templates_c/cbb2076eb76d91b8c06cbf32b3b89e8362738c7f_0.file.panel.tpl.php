@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-08 00:19:50
+/* Smarty version 4.2.1, created on 2022-10-10 20:38:41
   from 'C:\xampp\htdocs\Tpweb2\templates\panel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6340a6066fb988_15531639',
+  'unifunc' => 'content_634466b1882d07_10570684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbb2076eb76d91b8c06cbf32b3b89e8362738c7f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\panel.tpl',
-      1 => 1665181188,
+      1 => 1665427111,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6340a6066fb988_15531639 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634466b1882d07_10570684 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="container p-3">
@@ -35,14 +35,14 @@ function content_6340a6066fb988_15531639 (Smarty_Internal_Template $_smarty_tpl)
         <div class="offcanvas-body">
             <p>Perfil</p>
                 <?php if ($_SESSION['rol'] == "admin") {?>
-                <a href="mostrar-clientes"><p>Mostrar clientes</p></a>
-                <a href="mostrar-cuentas"><p>Mostrar cuentas</p></a>
+                <a href="show-clients"><p>Mostrar clientes</p></a>
+                <a href="show-accounts"><p>Mostrar cuentas</p></a>
             <?php } else { ?>
-                <a href='Cuentas-cliente/<?php echo $_SESSION['id_client'];?>
+                <a href='client-accounts/<?php echo $_SESSION['id_client'];?>
 '> <p>Tus cuentas</p></a>
             <?php }?>
             <p>Configuracion</p>
-            <a href="cerrar-sesion"><button class="btn btn-primary">Cerrar sesion</button></a>
+            <a href="close-sesion"><button class="btn btn-primary">Cerrar sesion</button></a>
         </div>
     </div>
 
