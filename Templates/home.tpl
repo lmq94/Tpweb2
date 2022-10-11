@@ -7,6 +7,13 @@
             <div class="d-flex " action="home">
                 {if $props.islogged}
                     {include file="panel.tpl"}
+
+                    <h1 class="m-3">Hola {$smarty.session.user->username}!</h1>
+
+                    <h1 class="m-3">Bienvenido al banco de Villa Gesell</h1>
+
+                    <h1 class="m-3"> Haga click en "menu de usuario" para empezar</h1>  
+
                 {else}
                     <div class="card m-3">
                             <img src="./Images/cuenta.jpg" class="card-img-top" alt="cuenta">

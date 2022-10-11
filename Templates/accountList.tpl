@@ -4,7 +4,7 @@
 
   {include file="panel.tpl"}
 
-  {if $smarty.session.rol == "admin" }
+  {if $smarty.session.user->rol == "admin" }
 
     <h3>Cuentas registradas en el banco en el banco </h3>
   {else}

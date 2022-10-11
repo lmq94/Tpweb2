@@ -5,7 +5,7 @@
 
 
         <form class="container-md" action="open-account" method="POST">
-            {if $smarty.session.rol=="admin"}
+            {if $smarty.session.user->rol=="admin"}
                 <div class="col-md-4">
                     <label for="exampleInputPassword1" class="form-label"> <h4>Ingrese el id del cliente</h4></label>
                     <input type="number" class="form-control" id="exampleInputPassword1" value="" name="id_client">
@@ -51,9 +51,10 @@
                     Dolar Estadounidense
                 </label>
             <div>
-
-            <button type="submit" class="btn btn-primary mt-3">Crear cuenta</button>
-            <h3 class="mt-3"> Importante: Esta cuenta tendra como titular al cliente asociado al usuario</h3>
+            {if !($smarty.session.user->rol=="admin")}
+                <button type="submit" class="btn btn-primary mt-3">Crear cuenta</button>
+                <h3 class="mt-3"> Importante: Esta cuenta tendra como titular al cliente asociado al usuario</h3>
+            {/if}
         </form>  
         
   

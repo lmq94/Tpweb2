@@ -37,6 +37,11 @@ switch ($params[0]) {
     case 'verify':
         $userControler->verifyUser();
         break;
+    case 'show-profile':
+        $clientControler = new ControlerClient();
+        $_SESSION['client']= $clientControler->getClientById($_SESSION['user']->id_client);
+        $userControler->showProfile();
+        break;
     case 'close-sesion':
         $userControler->logout();
         break;

@@ -8,7 +8,7 @@ class Helper {
 
      public static function checkAdmin () {
         if ($_SESSION['login']){
-            if (isset($_SESSION['rol']) && $_SESSION['rol'] == "admin") 
+            if (isset($_SESSION['user']->rol) && $_SESSION['user']->rol == "admin") 
                 { session_abort(); 
                 return true;}
             else {

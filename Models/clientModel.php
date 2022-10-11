@@ -24,6 +24,14 @@ class ClientModel extends Model {
     }
 
 
+    public function getClientById($id){
+        $query = $this->db->prepare("SELECT* FROM client WHERE client.id_client =?");
+        $query->execute([$id]);
+        $user= $query->fetch(PDO::FETCH_OBJ);
+        return $user;
+    }
+
+
     public function insertClient($dni, $alias, $city) {
         $query = $this->db->prepare("INSERT INTO client (dni, alias, city) VALUES (?, ?, ?)");
         $query->execute([$dni, $alias, $city]);

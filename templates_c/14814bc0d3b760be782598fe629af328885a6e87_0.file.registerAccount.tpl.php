@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-10 20:49:12
+/* Smarty version 4.2.1, created on 2022-10-11 20:16:51
   from 'C:\xampp\htdocs\Tpweb2\templates\registerAccount.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6344692829b870_32361824',
+  'unifunc' => 'content_6345b31375ded7_19116916',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14814bc0d3b760be782598fe629af328885a6e87' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerAccount.tpl',
-      1 => 1665427622,
+      1 => 1665512209,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6344692829b870_32361824 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6345b31375ded7_19116916 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -33,7 +33,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
 
         <form class="container-md" action="open-account" method="POST">
-            <?php if ($_SESSION['rol'] == "admin") {?>
+            <?php if ($_SESSION['user']->rol == "admin") {?>
                 <div class="col-md-4">
                     <label for="exampleInputPassword1" class="form-label"> <h4>Ingrese el id del cliente</h4></label>
                     <input type="number" class="form-control" id="exampleInputPassword1" value="" name="id_client">
@@ -79,9 +79,10 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                     Dolar Estadounidense
                 </label>
             <div>
-
-            <button type="submit" class="btn btn-primary mt-3">Crear cuenta</button>
-            <h3 class="mt-3"> Importante: Esta cuenta tendra como titular al cliente asociado al usuario</h3>
+            <?php if (!($_SESSION['user']->rol == "admin")) {?>
+                <button type="submit" class="btn btn-primary mt-3">Crear cuenta</button>
+                <h3 class="mt-3"> Importante: Esta cuenta tendra como titular al cliente asociado al usuario</h3>
+            <?php }?>
         </form>  
         
   

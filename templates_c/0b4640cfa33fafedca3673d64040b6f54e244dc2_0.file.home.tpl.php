@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-10 19:04:58
+/* Smarty version 4.2.1, created on 2022-10-11 18:27:15
   from 'C:\xampp\htdocs\Tpweb2\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634450ba031439_27933722',
+  'unifunc' => 'content_6345996364a8d3_28824387',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b4640cfa33fafedca3673d64040b6f54e244dc2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\home.tpl',
-      1 => 1665421496,
+      1 => 1665505634,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634450ba031439_27933722 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6345996364a8d3_28824387 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,6 +34,14 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                 <?php if ($_smarty_tpl->tpl_vars['props']->value['islogged']) {?>
                     <?php $_smarty_tpl->_subTemplateRender("file:panel.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+
+                    <h1 class="m-3">Hola <?php echo $_SESSION['user']->username;?>
+!</h1>
+
+                    <h1 class="m-3">Bienvenido al banco de Villa Gesell</h1>
+
+                    <h1 class="m-3"> Haga click en "menu de usuario" para empezar</h1>  
+
                 <?php } else { ?>
                     <div class="card m-3">
                             <img src="./Images/cuenta.jpg" class="card-img-top" alt="cuenta">

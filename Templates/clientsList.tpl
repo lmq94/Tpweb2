@@ -17,14 +17,14 @@
               </tr>
             </thead>
             <tbody>
-              {foreach from=$clients item=$client}
-                  <tr>
-                  <td>{$client->dni}</td>
-                  <td>{$client->alias}</td>
-                  <td>{$client->city}</td>
-                  <td> <a href='delete-client/{$client->id_client}' type='button' class='btn btn-danger'>Eliminar cliente</a></td>
-                  </tr>
-                {/foreach}
+                {foreach from=$clients item=$client}
+                    <tr>
+                    <td>{$client->dni}</td>
+                    <td>{$client->alias}</td>
+                    <td>{$client->city}</td>
+                    <td> <a href='delete-client/{$client->id_client}' type='button' class='btn btn-danger'>Eliminar cliente</a></td>
+                    </tr>
+                  {/foreach}
             </tbody>
           </table>
         </div>

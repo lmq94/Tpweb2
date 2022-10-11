@@ -37,10 +37,9 @@ class ControlerUser extends Controler{
         $user= $this->model->getUserByUsername($username);
          if($user && password_verify($password, $user->pass)){
             session_start();
+            $_SESSION['user']=$user;
             $_SESSION['id_client']=$user->id_client;
-            $_SESSION['username']=$user->username;
             $_SESSION['login']=true;
-            $_SESSION['rol']=$user->rol;
             header('location: home');
             
          }
@@ -51,6 +50,12 @@ class ControlerUser extends Controler{
 
     function showHome(){
         $this->view->Home();
+    }
+
+    function showProfile(){
+        $this->view->showprofile();
+
+
     }
 
     function logout(){

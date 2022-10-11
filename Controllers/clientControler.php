@@ -17,6 +17,12 @@ class ControlerClient extends Controler{
 
     
     }
+
+
+    public function getClientById($id){
+        return $this->model->getClientById($id);
+
+    }
     
     public function showClient() {
         if(helper::checkAdmin ()){
