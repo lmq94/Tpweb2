@@ -14,7 +14,7 @@ html, body {
 footer p {
     text-align: center;
     background-color:cornflowerblue;
-    
+    margin: 0;
 }
 
 
@@ -24,15 +24,8 @@ header img {
     max-height:500px;
 }
 
-.d-flex{
-    justify-content: space-between;
-}
 
 
-.container{
-    margin-bottom:10px;
-
-}
 
 
 
@@ -61,6 +54,12 @@ header img {
     max-height: 400px;
     margin-left: 50px;
    
+}
+
+footer{
+    position:fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 

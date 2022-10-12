@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-11 20:13:22
+/* Smarty version 4.2.1, created on 2022-10-12 03:42:42
   from 'C:\xampp\htdocs\Tpweb2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6345b242b08b24_13069002',
+  'unifunc' => 'content_63461b92cb1993_15590443',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14424e8e1dd422bff0c3e51df386a49ab66657fd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\header.tpl',
-      1 => 1665512001,
+      1 => 1665538957,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6345b242b08b24_13069002 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63461b92cb1993_15590443 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,7 +31,8 @@ function content_6345b242b08b24_13069002 (Smarty_Internal_Template $_smarty_tpl)
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-      <link rel="stylesheet" href="./Css/visual.css">
+      <link rel="stylesheet" href="<?php echo BASE_URL;?>
+Css/visual.css">
       <title>Banco de Gesell</title>
   </head>
   <body>
