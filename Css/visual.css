@@ -12,6 +12,7 @@ html, body {
 
 .main-container{
     padding:20px;
+   justify-items: center;
 }
 
 
@@ -28,18 +29,13 @@ header img {
     max-height:500px;
 }
 
-
-
-
-
-
 .titulo-login{
     text-align: center;
 }
 
 .login{
     display:flex;
-    justify-content:center;
+    align-items: center;
 
 }
 

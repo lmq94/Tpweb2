@@ -27,7 +27,11 @@
                   {/foreach}
             </tbody>
           </table>
-        </div>
+
+          <a href='register-client' type='button' class="btn btn-success mx-3 mt-3 m-3">Registrar un cliente nuevo</a>
+          <a href='' type='button' class="btn btn-success mx-3 mt-3 m-3">Editar un cliente</a>      
+
+       </div>
     </div>
 
 

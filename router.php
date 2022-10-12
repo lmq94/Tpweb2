@@ -47,12 +47,20 @@ switch ($params[0]) {
         break;
     case 'show-clients':
         $clientControler = new ControlerClient();
-        $clientControler->showClient();
+        $clientControler->showClient();                                                             
         break;
-    case 'delete-cliente':
+    case 'register-client':
+        $clientControler = new ControlerClient();              
+        $clientControler->showClientForm();
+        break;
+    case 'activation-client':
+        $clientControler = new ControlerClient();              
+        $clientControler->addClient();
+        break;
+    case 'delete-client':                                                                       
         $clientControler = new ControlerClient();
         $id_client= $params[1];
-        $clientControler->deleteClient($id);
+        $clientControler->deleteClient($id_client);
         break;
     case 'show-accounts':
         $accountControler = new ControlerAccount();
