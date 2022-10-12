@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-11 20:16:51
+/* Smarty version 4.2.1, created on 2022-10-12 19:19:57
   from 'C:\xampp\htdocs\Tpweb2\templates\registerAccount.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6345b31375ded7_19116916',
+  'unifunc' => 'content_6346f73d90d0a2_30496422',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14814bc0d3b760be782598fe629af328885a6e87' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerAccount.tpl',
-      1 => 1665512209,
+      1 => 1665595195,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6345b31375ded7_19116916 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6346f73d90d0a2_30496422 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -79,8 +79,8 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                     Dolar Estadounidense
                 </label>
             <div>
+            <button type="submit" class="btn btn-primary mt-3">Crear cuenta</button>
             <?php if (!($_SESSION['user']->rol == "admin")) {?>
-                <button type="submit" class="btn btn-primary mt-3">Crear cuenta</button>
                 <h3 class="mt-3"> Importante: Esta cuenta tendra como titular al cliente asociado al usuario</h3>
             <?php }?>
         </form>  
