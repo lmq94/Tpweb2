@@ -6,11 +6,13 @@ require_once "./Controllers/MainControler.php";
 require_once "./Helper/helper.php";
 
 class ControlerAccount extends Controler{
-   
 
+     private ClientModel $clientModel;
+   
 
     public function __construct(){
             parent::__construct(new AccountModel,new AccountView());
+            $this->clientModel= new ClientModel();
 
         }
     
@@ -29,7 +31,9 @@ class ControlerAccount extends Controler{
     }
 
     function accountForm(){
-        $this->view->showForm();
+        $clients=$this->clientModel->getAllClient();
+        $this->view->showForm($clients);
+        
     }
 
 

@@ -6,10 +6,13 @@
 
         <form class="container-md" action="open-account" method="POST">
             {if $smarty.session.user->rol=="admin"}
-                <div class="col-md-4">
-                    <label for="exampleInputPassword1" class="form-label"> <h4>Ingrese el id del cliente</h4></label>
-                    <input type="number" class="form-control" id="exampleInputPassword1" value="" name="id_client">
-                </div>
+                <h4> Seleccione un cliente</h4>
+                <select class="form-select" aria-label="Default select example" name='id_client'>
+                    <option selected>Seleccionar cliente</option>
+                    {foreach from=$clients item=$client}
+                        <option value="{$client->id_client}">{$client->alias}</option>
+                    {/foreach}
+                </select>
             {/if}
 
             <div class="col-md-4">

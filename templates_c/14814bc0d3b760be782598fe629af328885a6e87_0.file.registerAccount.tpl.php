@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-12 22:32:30
+/* Smarty version 4.2.1, created on 2022-10-12 23:41:56
   from 'C:\xampp\htdocs\Tpweb2\templates\registerAccount.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6347245e9962d4_36068239',
+  'unifunc' => 'content_634734a490b223_82000012',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14814bc0d3b760be782598fe629af328885a6e87' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerAccount.tpl',
-      1 => 1665605497,
+      1 => 1665610886,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6347245e9962d4_36068239 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634734a490b223_82000012 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,10 +34,22 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
         <form class="container-md" action="open-account" method="POST">
             <?php if ($_SESSION['user']->rol == "admin") {?>
-                <div class="col-md-4">
-                    <label for="exampleInputPassword1" class="form-label"> <h4>Ingrese el id del cliente</h4></label>
-                    <input type="number" class="form-control" id="exampleInputPassword1" value="" name="id_client">
-                </div>
+                <h4> Seleccione un cliente</h4>
+                <select class="form-select" aria-label="Default select example" name='id_client'>
+                    <option selected>Seleccionar cliente</option>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['clients']->value, 'client');
+$_smarty_tpl->tpl_vars['client']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['client']->value) {
+$_smarty_tpl->tpl_vars['client']->do_else = false;
+?>
+                        <option value="<?php echo $_smarty_tpl->tpl_vars['client']->value->id_client;?>
+"><?php echo $_smarty_tpl->tpl_vars['client']->value->alias;?>
+</option>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </select>
             <?php }?>
 
             <div class="col-md-4">

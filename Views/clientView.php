@@ -9,11 +9,12 @@ class ClientView extends View {
     }
 
 
-    function showClients($Clients) { 
+    function showClients($clients) { 
         
-        $this->smarty->assign('clients', $Clients);
+        $this->smarty->assign('clients', $clients);
 
         $this->smarty->display('ClientsList.tpl');
+        
     
 
     }

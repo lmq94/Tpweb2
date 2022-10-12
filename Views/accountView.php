@@ -10,7 +10,8 @@ class AccountView extends View{
     }
 
 
-    function showForm(){
+    function showForm($clients){
+        $this->smarty->assign('clients',$clients);
         $this->smarty->display('registerAccount.tpl');
     }
 
