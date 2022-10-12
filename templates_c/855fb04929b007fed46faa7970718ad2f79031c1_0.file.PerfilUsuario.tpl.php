@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-11 20:08:26
+/* Smarty version 4.2.1, created on 2022-10-12 04:14:09
   from 'C:\xampp\htdocs\Tpweb2\templates\PerfilUsuario.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6345b11a3c8481_10714826',
+  'unifunc' => 'content_634622f1181925_41469689',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '855fb04929b007fed46faa7970718ad2f79031c1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\PerfilUsuario.tpl',
-      1 => 1665511702,
+      1 => 1665540846,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6345b11a3c8481_10714826 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634622f1181925_41469689 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -36,8 +36,6 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         <div class="col-12 my-3 pt-3 shadow">
             <h1>Usuario <?php echo $_SESSION['user']->username;?>
 </h1>
-            <h3> Id de usuario: <?php echo $_SESSION['user']->id_user;?>
-</h3>
             <h3>Correo electronico: <?php echo $_SESSION['user']->email;?>
 </h3>
             <h3> Rango: <?php echo $_SESSION['user']->rol;?>

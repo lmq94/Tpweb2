@@ -10,6 +10,10 @@ html, body {
     min-height: 100%;
 }
 
+.main-container{
+    padding:20px;
+}
+
 
 footer p {
     text-align: center;
@@ -60,6 +64,7 @@ footer{
     position:fixed;
     width: 100%;
     bottom: 0;
+    
 }
 
 
