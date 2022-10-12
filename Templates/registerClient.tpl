@@ -2,24 +2,25 @@
 
 {include file="panel.tpl"}
 
-<h1>Registrar cliente</h1>
+<h3>Registrar cliente</h3>
 
 
-<form class="row g-3">
+<form class="row g-3" action='activation-client' method="POST">
   <div class="col-md-4">
     <label for="validationServer01" class="form-label">Alias</label>
-    <input type="text" class="form-control is-valid" id="validationServer01" value="" required>
+    <input type="text" class="form-control " id="validationServer01" name="alias" value="" required>
   </div>
   <div class="col-md-4">
     <label for="validationServer02" class="form-label">Dni</label>
-    <input type="number" class="form-control is-valid" id="validationServer02" value="Otto" required>
+    <input type="number" class="form-control " id="validationServer02" name="dni" value="" required>
   </div>
   <div class="col-md-6">
     <label for="validationServer03" class="form-label">City</label>
-    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+    <input type="text" class="form-control mb-3 " id="validationServer03" name="city" value="" aria-describedby="validationServer03Feedback" required>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <label for="invalidCheck3" class="form-label">Acepto las politicas de registro de clientes</label>
+      <input class="form-check-input " type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
     </div>
   </div>
   <div class="col-12">

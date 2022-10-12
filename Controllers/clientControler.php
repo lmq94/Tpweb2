@@ -31,17 +31,25 @@ class ControlerClient extends Controler{
         }
     }
 
+    public function showClientForm(){
+        if(helper::checkAdmin ()){
+            $this->view->showCLientForm();
+        }
+
+    }
+
 
     function addClient() {
         // TODO: validar entrada de datos
+        if(helper::checkAdmin ()){
+            $dni = $_POST['dni'];
+            $alias = $_POST['alias'];
+            $city = $_POST['city'];
 
-        $dni = $_POST['dni'];
-        $alias = $_POST['alias'];
-        $city = $_POST['city'];
+            $this->model->insertClient($dni, $alias, $city);
+        }
 
-        $this->model->insertClient($dni, $alias, $city);
-
-        header("Location: " . BASE_URL); 
+        header("Location: " . BASE_URL."show-clients"); 
     }
 
 

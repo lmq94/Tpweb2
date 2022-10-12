@@ -17,4 +17,12 @@ class ClientView extends View {
     
 
     }
+
+
+    function showCLientForm(){
+
+        $this->smarty->display('registerClient.tpl');
+
+    }
+
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-11 20:15:47
+/* Smarty version 4.2.1, created on 2022-10-12 18:08:27
   from 'C:\xampp\htdocs\Tpweb2\templates\ClientsList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6345b2d32d0ef8_94727191',
+  'unifunc' => 'content_6346e67b374871_95302157',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a3f01bb93979ddb8faa4fd707113c3cbcdec6dd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\ClientsList.tpl',
-      1 => 1665512145,
+      1 => 1665590746,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6345b2d32d0ef8_94727191 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6346e67b374871_95302157 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -66,7 +66,11 @@ $_smarty_tpl->tpl_vars['client']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </tbody>
           </table>
-        </div>
+
+          <a href='register-client' type='button' class="btn btn-success mx-3 mt-3 m-3">Registrar un cliente nuevo</a>
+          <a href='' type='button' class="btn btn-success mx-3 mt-3 m-3">Editar un cliente</a>      
+
+       </div>
     </div>
 
 

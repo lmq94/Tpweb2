@@ -51,8 +51,8 @@
                     Dolar Estadounidense
                 </label>
             <div>
+            <button type="submit" class="btn btn-primary mt-3">Crear cuenta</button>
             {if !($smarty.session.user->rol=="admin")}
-                <button type="submit" class="btn btn-primary mt-3">Crear cuenta</button>
                 <h3 class="mt-3"> Importante: Esta cuenta tendra como titular al cliente asociado al usuario</h3>
             {/if}
         </form>  

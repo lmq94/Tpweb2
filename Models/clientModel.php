@@ -41,7 +41,7 @@ class ClientModel extends Model {
 
 
     function deleteClientById($id) {
-        $query = $this->db->prepare('DELETE FROM client WHERE id_cliente = ?');
+        $query = $this->db->prepare('DELETE FROM client WHERE id_client = ?');
         $query->execute([$id]);
     }
 
