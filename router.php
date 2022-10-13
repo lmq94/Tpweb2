@@ -7,7 +7,6 @@ require_once 'Controllers\accountControler.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
-
 $action = 'home'; // accion por defecto, aparece el Home
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
@@ -57,6 +56,17 @@ switch ($params[0]) {
         $clientControler = new ControlerClient();              
         $clientControler->addClient();
         break;
+    case 'edit-client':
+        $clientControler = new ControlerClient();
+        $editClient= true;
+        $id_client= $params[1];  
+        $clientControler->showClient($editClient,$id_client);              
+        break;
+    case 'update-client':
+        $clientControler = new ControlerClient();
+        $id_client= $params[1];  
+        $clientControler->updateClient($id_client);              
+        break;
     case 'delete-client':                                                                       
         $clientControler = new ControlerClient();
         $id_client= $params[1];
@@ -88,16 +98,3 @@ switch ($params[0]) {
         echo('404 Page not found');
         break;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

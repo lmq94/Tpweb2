@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 05:03:27
-  from 'C:\xampp\htdocs\Tpweb2\templates\ClientsList.tpl' */
+/* Smarty version 4.2.1, created on 2022-10-13 01:27:44
+  from 'C:\xampp\htdocs\Tpweb2\templates\clientsList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63477fff57c3e5_58679201',
+  'unifunc' => 'content_63474d70d1fa03_82372427',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '2a3f01bb93979ddb8faa4fd707113c3cbcdec6dd' => 
+    '329a2b3560259a673462d28df3d13bf18b07474c' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\ClientsList.tpl',
-      1 => 1665630205,
+      0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\clientsList.tpl',
+      1 => 1665617254,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63477fff57c3e5_58679201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63474d70d1fa03_82372427 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -54,27 +54,20 @@ $_smarty_tpl->tpl_vars['client']->do_else = false;
                     <tr>
                     <td><?php echo $_smarty_tpl->tpl_vars['client']->value->dni;?>
 </td>
-                    <?php if (($_smarty_tpl->tpl_vars['editClient']->value) && ($_smarty_tpl->tpl_vars['id_client']->value == $_smarty_tpl->tpl_vars['client']->value->id_client)) {?>
-                      <form action='update-client/<?php echo $_smarty_tpl->tpl_vars['client']->value->id_client;?>
-' method="POST">
-                         <td> <input name="alias" type="text" required> </td>
-                         <td> <input name="city" type="text" required> </td>
-                         <td class="d-flex">  <button  type='submit' class='btn btn-success mx-3 mt-3 m-3'>Listo</button>
-                      </form>
-                          <a href='delete-client/<?php echo $_smarty_tpl->tpl_vars['client']->value->id_client;?>
-' type='button' class='btn btn-danger mx-3 mt-3 m-3'>Eliminar cliente</a> </td>
-                    <?php } else { ?>
-                          <td><?php echo $_smarty_tpl->tpl_vars['client']->value->alias;?>
+                    <td>
+                    <?php if ($_smarty_tpl->tpl_vars['editClient']->value) {?>
+                          <input type="text">
+                        <?php } else { ?>
+                          <?php echo $_smarty_tpl->tpl_vars['client']->value->alias;?>
+
+                    <?php }?>
+                    </td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['client']->value->city;?>
 </td>
-                          <td><?php echo $_smarty_tpl->tpl_vars['client']->value->city;?>
-</td>
-                          <td class="d-flex">  <a href='edit-client/<?php echo $_smarty_tpl->tpl_vars['client']->value->id_client;?>
+                    <td class="d-flex">  <a href='edit-client/<?php echo $_smarty_tpl->tpl_vars['client']->value->id_client;?>
 ' type='button' class='btn btn-primary mx-3 mt-3 m-3'>Editar cliente</a>
                           <a href='delete-client/<?php echo $_smarty_tpl->tpl_vars['client']->value->id_client;?>
-' type='button' class='btn btn-danger mx-3 mt-3 m-3'>Eliminar cliente</a>
-                    <?php }?>
-                    
-      
+' type='button' class='btn btn-danger'>Eliminar cliente</a>
                     </td>
                     </tr>
                   <?php

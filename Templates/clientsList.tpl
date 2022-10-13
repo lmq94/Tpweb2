@@ -20,16 +20,28 @@
                 {foreach from=$clients item=$client}
                     <tr>
                     <td>{$client->dni}</td>
-                    <td>{$client->alias}</td>
-                    <td>{$client->city}</td>
-                    <td> <a href='delete-client/{$client->id_client}' type='button' class='btn btn-danger'>Eliminar cliente</a></td>
+                    {if ($editClient) && ($id_client == $client->id_client)}
+                      <form action='update-client/{$client->id_client}' method="POST">
+                         <td> <input name="alias" type="text" required> </td>
+                         <td> <input name="city" type="text" required> </td>
+                         <td class="d-flex">  <button  type='submit' class='btn btn-success mx-3 mt-3 m-3'>Listo</button>
+                      </form>
+                          <a href='delete-client/{$client->id_client}' type='button' class='btn btn-danger mx-3 mt-3 m-3'>Eliminar cliente</a> </td>
+                    {else}
+                          <td>{$client->alias}</td>
+                          <td>{$client->city}</td>
+                          <td class="d-flex">  <a href='edit-client/{$client->id_client}' type='button' class='btn btn-primary mx-3 mt-3 m-3'>Editar cliente</a>
+                          <a href='delete-client/{$client->id_client}' type='button' class='btn btn-danger mx-3 mt-3 m-3'>Eliminar cliente</a>
+                    {/if}
+                    
+      
+                    </td>
                     </tr>
                   {/foreach}
             </tbody>
           </table>
 
-          <a href='register-client' type='button' class="btn btn-success mx-3 mt-3 m-3">Registrar un cliente nuevo</a>
-          <a href='' type='button' class="btn btn-success mx-3 mt-3 m-3">Editar un cliente</a>      
+          <a href='register-client' type='button' class="btn btn-success mx-3 mt-3 m-3">Registrar un cliente nuevo</a>     
 
        </div>
     </div>

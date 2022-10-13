@@ -45,6 +45,13 @@ class ClientModel extends Model {
         $query->execute([$id]);
     }
 
+    function updateClient($id_client, $alias, $city){
+        $query = $this->db->prepare('UPDATE client SET alias=?, city=?  WHERE id_client = ?');
+        $query->execute([$alias,$city,$id_client]);
+
+
+    }
+
 
 
 

@@ -24,12 +24,14 @@ class ControlerClient extends Controler{
 
     }
     
-    public function showClient() {
+    public function showClient($editClient=null, $id_client=null) {
         if(helper::checkAdmin ()){
             $clients = $this->model->getAllClient();
-            $this->view->showClients($clients);
+            $this->view->showClients($clients, $editClient, $id_client);
+    
         }
     }
+    
 
     public function showClientForm(){
         if(helper::checkAdmin ()){
@@ -60,5 +62,15 @@ class ControlerClient extends Controler{
     }
 
 
+
+    function updateClient($id_client){
+        $alias = $_POST['alias'];
+        $city = $_POST['city'];
+        $this->model->updateClient($id_client, $alias, $city);
+        header("Location: " . BASE_URL. "show-clients");
+
+        
+        
+    }
 
 }
