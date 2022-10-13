@@ -23,10 +23,10 @@ class ControlerAccount extends Controler{
         }
     }
 
-    public function bankAccounts() {
+    public function bankAccounts($editAccount=false,$id_account=null) {
         if(helper::checkAdmin ()){
-            $Accounts = $this->model->getBankaccounts();
-            $this->view->showAccounts($Accounts);
+            $accounts = $this->model->getBankaccounts();
+            $this->view->showAccounts($accounts,$editAccount,$id_account);
         }
     }
 
@@ -60,6 +60,17 @@ class ControlerAccount extends Controler{
             header("Location: " . BASE_URL . "show-accounts");
         else
             header("Location: " . BASE_URL . "client-accounts/$id"); 
+    }
+
+
+    function updateAccount($id_account){
+        $amount = $_POST['amount'];
+        $type_account = $_POST['type_account'];
+        $coin = $_POST['coin'];
+
+        $this->model->updateAccount($id_account, $coin, $amount, $type_account);
+        header("Location: " . BASE_URL . "show-accounts");
+
     }
 
     

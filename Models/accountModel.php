@@ -36,6 +36,13 @@ class AccountModel extends Model {
         return $this->db->lastInsertId();
     }
 
+    function updateAccount($id_account, $coin, $amount, $type_account){
+        $query = $this->db->prepare('UPDATE account SET coin=? , amount=?, type_account=?  WHERE id_account = ?');
+        $query->execute([$coin, $amount, $type_account,$id_account]);
+
+
+    }
+
 
     function deleteAccountId($id) {
         $query = $this->db->prepare('DELETE FROM account WHERE id_account = ?');

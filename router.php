@@ -89,6 +89,17 @@ switch ($params[0]) {
         $accountControler = new ControlerAccount();
         $accountControler->addAccount();
         break;
+    case 'edit-account':
+        $accountControler = new ControlerAccount();
+        $editAccount= true;
+        $id_account= $params[1];  
+        $accountControler->bankAccounts($editAccount,$id_account);              
+        break;
+    case 'update-account':
+        $accountControler = new ControlerAccount();
+        $id_account= $params[1];
+        $accountControler->updateAccount($id_account);           
+        break;
     case 'delete-account':
         $accountControler = new ControlerAccount();
         $id_account= $params[1];

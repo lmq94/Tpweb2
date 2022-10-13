@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-12 22:32:25
+/* Smarty version 4.2.1, created on 2022-10-13 20:49:15
   from 'C:\xampp\htdocs\Tpweb2\templates\AccountList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63472459b4a664_18562304',
+  'unifunc' => 'content_63485dabaf8e63_67973730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '085bbdc9942dc84874eda9ed2165be749b0b3c79' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\AccountList.tpl',
-      1 => 1665538338,
+      1 => 1665686489,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63472459b4a664_18562304 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63485dabaf8e63_67973730 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -42,7 +42,9 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th scope="col">Numero de cliente</th>
+        <?php if ($_SESSION['user']->rol == "admin") {?>
+          <th scope="col">Numero del cliente</th>
+        <?php }?>
         <th scope="col">Monto</th>
         <th scope="col">Tipo de cuenta</th>
         <th scope="col">Tipo de moneda</th>
@@ -57,16 +59,34 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['account']->value
 $_smarty_tpl->tpl_vars['account']->do_else = false;
 ?>
           <tr>
-          <td><?php echo $_smarty_tpl->tpl_vars['account']->value->id_client;?>
+            <?php if ($_SESSION['user']->rol == "admin") {?>
+              <td><?php echo $_smarty_tpl->tpl_vars['account']->value->id_client;?>
 </td>
-          <td><?php echo $_smarty_tpl->tpl_vars['account']->value->amount;?>
+            <?php }?>
+            <?php if (($_smarty_tpl->tpl_vars['editAccount']->value) && ($_smarty_tpl->tpl_vars['id_account']->value == $_smarty_tpl->tpl_vars['account']->value->id_account)) {?>
+              <form action='update-account/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
+' method="POST">
+                <td> <input name="amount" type="text" required> </td>
+                <td> <input name="type_account" type="text" required> </td>
+                <td> <input name="coin" type="text" required> </td>
+                <td class="d-flex">  <button  type='submit' class='btn btn-success mx-3 mt-3 m-3'>Listo</button>
+              </form>
+                  <a href='delete-client/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
+' type='button' class='btn btn-danger mx-3 mt-3 m-3'>Eliminar Cuenta</a> </td>
+            <?php } else { ?>
+              <td><?php echo $_smarty_tpl->tpl_vars['account']->value->amount;?>
 </td>
-          <td><?php echo $_smarty_tpl->tpl_vars['account']->value->type_account;?>
+              <td><?php echo $_smarty_tpl->tpl_vars['account']->value->type_account;?>
 </td>
-          <td><?php echo $_smarty_tpl->tpl_vars['account']->value->coin;?>
+              <td><?php echo $_smarty_tpl->tpl_vars['account']->value->coin;?>
 </td>
-          <td> <a href='delete-account/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
-' type='button' class='btn btn-danger'>Cerrar cuenta</a></td>
+              <td class="d-flex">  <a href='edit-account/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
+' type='button' class='btn btn-primary mx-3 mt-3 m-3'>Editar Cuenta</a>
+                          <a href='delete-account/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
+' type='button' class='btn btn-danger mx-3 mt-3 m-3'>Eliminar cuenta</a>
+            <?php }?>
+            
+              </td>
           </tr>
         <?php
 }
@@ -75,7 +95,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   </table>
 
     <a href='register-account' type='button' class="btn btn-success mx-3 mt-3 m-3">Abrir una cuenta</a>
-    <a href='' type='button' class="btn btn-success mx-3 mt-3 m-3">Editar una cuenta</a>
 </div>
 
 
