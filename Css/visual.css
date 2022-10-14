@@ -33,23 +33,12 @@ header img {
     text-align: center;
 }
 
-.login{
-    display:flex;
-    align-items: center;
-
-}
-
-.login img{
-    max-width: 200px;
-    max-height: 400px;
-    margin-left: 50px;
-}
 
 .form-alta{
     justify-items: center;
 }
 
-.card img{
+.main-container img{
     max-width: 200px;
     max-height: 400px;
     margin-left: 50px;

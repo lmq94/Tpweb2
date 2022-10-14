@@ -5,23 +5,23 @@
 
 
 
-<div class="login m-3">
-    <form class="mb-3" action=verify method="POST">
-    <h2 class="titulo-login"> Bienvenido </h2>
-        <div class="mb-4">
+<div class="container mb-3">
+    <form class="form-alta m-4" action=verify method="POST">
+        <h2> Bienvenido </h2>
+        <div class="col-md-4">
             <label for="email" class="form-label"> Correo electronico </label>
             <input type="email" class="form-control" name="email"  required>
         </div>
-        <div class="mb-4">
+        <div class="col-md-4 mb-4 ">
             <label for="password" class="form-label"> Contraseña</label>
             <input type="password" class="form-control" name="password"  required>
         </div>
-        <div class="mb-4 form-check">
+        <div class="col-md-4 form-check">
             <input type="checkbox" class="form-check-label" name="connected">
             <label for="connected" class="form-check-label"> Mantenerme conectado</label>
         </div>
-        <div class="d-grid"> 
-            <button type="submit" class="btn btn-primary">Iniciar sesion </button>
+        <div class="col-md-4"> 
+            <button type="submit" class="btn btn-primary m-4">Iniciar sesion </button>
         </div>
         {if $error} 
             <div class="alert alert-danger mt-3">
@@ -29,15 +29,12 @@
             </div>
         {/if}
 
-        <div class="my-3"> 
+        <div class="ml-3"> 
             <span>No tenes cuenta? <a href="registrar-usuario"> Registrarse </a> </span>
         </div>
     </form>
-
-    <div>
-            <img src="Images\logo-municipalidad-Gesell.jpeg" alt="foto-login">
-    </div> 
 </div>
+
 
 
 {include file="footer.tpl"}

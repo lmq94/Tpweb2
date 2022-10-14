@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-14 17:03:59
+/* Smarty version 4.2.1, created on 2022-10-14 18:15:56
   from 'C:\xampp\htdocs\Tpweb2\templates\registerUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63497a5fca1db1_56412930',
+  'unifunc' => 'content_63498b3c3660d1_91204058',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3cce08dbddf888a7c5b42dbbf0c5fe863b6d6669' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerUser.tpl',
-      1 => 1665759838,
+      1 => 1665764154,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63497a5fca1db1_56412930 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63498b3c3660d1_91204058 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('props'=>$_smarty_tpl->tpl_vars['props']->value), 0, false);
 ?>
 
@@ -30,7 +30,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 <div class="container mb-3">
   <h3>Ingrese los siguientes datos para crear su usuario </h3>
 
-  <form class="form-alta" action='insertar-usuario' method="POST">
+  <form class="form-alta m-4" action='insertar-usuario' method="POST">
     <div class="col-md-4">
       <label for="validationServer01" class="form-label">Usuario</label>
       <input type="text" class="form-control" id="validationServer01" name="username" value="" required>

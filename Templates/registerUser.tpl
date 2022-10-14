@@ -4,7 +4,7 @@
 <div class="container mb-3">
   <h3>Ingrese los siguientes datos para crear su usuario </h3>
 
-  <form class="form-alta" action='insertar-usuario' method="POST">
+  <form class="form-alta m-4" action='insertar-usuario' method="POST">
     <div class="col-md-4">
       <label for="validationServer01" class="form-label">Usuario</label>
       <input type="text" class="form-control" id="validationServer01" name="username" value="" required>
