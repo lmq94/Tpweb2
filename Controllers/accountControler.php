@@ -50,18 +50,10 @@ class ControlerAccount extends Controler{
         $coin = $_POST['coin'];
 
         $this->model->CreateAccount($id_client, $amount,$type_account, $coin);
-        $this->redirigir( $id_client);
+        $this->redirect("show-accounts/$id_client");
     }
 
         
-
-    function redirigir($id){
-        if(helper::checkAdmin ())
-            header("Location: " . BASE_URL . "show-accounts");
-        else
-            header("Location: " . BASE_URL . "client-accounts/$id"); 
-    }
-
 
     function updateAccount($id_account){
         $amount = $_POST['amount'];
@@ -69,7 +61,7 @@ class ControlerAccount extends Controler{
         $coin = $_POST['coin'];
 
         $this->model->updateAccount($id_account, $coin, $amount, $type_account);
-        header("Location: " . BASE_URL . "show-accounts");
+        $this->redirect("show-accounts");
 
     }
 
@@ -79,7 +71,7 @@ class ControlerAccount extends Controler{
     function deleteAccount($id) {
         $this->model->deleteAccountId($id);
         $id_client= $_SESSION['id_client'];
-        $this->redirigir($id_client);
+        $this->redirect("show-accounts/$id_client");
     }
 
 

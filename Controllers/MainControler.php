@@ -12,6 +12,10 @@ class Controler{
         $this->view= $view;
     }
 
+    function redirect($lugar){
+        header("Location: " . BASE_URL."$lugar"); 
+    }
+
    
 
 

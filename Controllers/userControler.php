@@ -28,7 +28,7 @@ class ControlerUser extends Controler{
                 $this->model->nuevoUsuario($_POST['username'],$_POST['password'], $_POST['email'], $_POST['id_user']);
             }
         }
-        header('location:registrar-usuario');
+        $this->redirect("registrar-usuario");
     }
 
     function verifyUser(){
@@ -40,7 +40,7 @@ class ControlerUser extends Controler{
             $_SESSION['user']=$user;
             $_SESSION['id_client']=$user->id_client;
             $_SESSION['login']=true;
-            header('location: home');
+            $this->redirect("home");
             
          }
          else {
@@ -61,7 +61,7 @@ class ControlerUser extends Controler{
     function logout(){
         session_start();
         session_destroy();
-        header('location: home');
+        $this->redirect("home");
     }
 
                 
