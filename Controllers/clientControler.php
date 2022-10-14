@@ -18,7 +18,6 @@ class ControlerClient extends Controler{
     
     }
 
-
     public function getClientById($id){
         return $this->model->getClientById($id);
 
@@ -33,7 +32,6 @@ class ControlerClient extends Controler{
     
        
     }
-    
 
     public function showClientForm(){
         if(helper::checkAdmin ()){
@@ -43,7 +41,6 @@ class ControlerClient extends Controler{
             $this->redirect("home");
 
     }
-
 
     function addClient() {
         // TODO: validar entrada de datos
@@ -58,23 +55,16 @@ class ControlerClient extends Controler{
         $this->redirect("show-clients");
     }
 
-
-
     function deleteClient($id) {
         $this->model->deleteClientById($id);
         $this->redirect("show-clients");
     }
 
-
-
     function updateClient($id_client){
         $alias = $_POST['alias'];
         $city = $_POST['city'];
         $this->model->updateClient($id_client, $alias, $city);
-        $this->redirect("show-clients");
-
-        
-        
+        $this->redirect("show-clients");      
     }
 
 }

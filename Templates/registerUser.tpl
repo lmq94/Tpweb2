@@ -24,7 +24,8 @@
                         <option value="{$client->id_client}">{$client->alias}</option>
                     {/foreach}
     </select>
-    <div class="form-check mt-3">
+    <p class="mt-3">Nota: un cliente solo puede tener un usuario asociado a el</p>
+    <div class="form-check mt-3 mb-3">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
         Acepto los terminos y condiciones

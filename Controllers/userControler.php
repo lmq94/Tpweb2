@@ -10,9 +10,9 @@ class ControlerUser extends Controler{
 
     public function __construct(){
 
-            parent::__construct(new UserModel,new UserView());
-            $this->clientModel= new ClientModel();
-        }
+        parent::__construct(new UserModel,new UserView());
+        $this->clientModel= new ClientModel();
+    }
 
 
     public function agregarUsuario(){

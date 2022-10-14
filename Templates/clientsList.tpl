@@ -41,6 +41,8 @@
             </tbody>
           </table>
 
+          <p>Nota: Si se elimina un cliente, tambien se eliminaran todas sus cuentas y el usuario asociado </p>
+
           <a href='register-client' type='button' class="btn btn-success mx-3 mt-3 m-3">Registrar un cliente nuevo</a>     
 
        </div>

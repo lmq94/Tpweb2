@@ -12,7 +12,7 @@
             <label for="email" class="form-label"> Correo electronico </label>
             <input type="email" class="form-control" name="email"  required>
         </div>
-        <div class="col-md-4 mb-4 ">
+        <div class="col-md-4 mb-2 ">
             <label for="password" class="form-label"> Contraseña</label>
             <input type="password" class="form-control" name="password"  required>
         </div>
@@ -21,7 +21,7 @@
             <label for="connected" class="form-check-label"> Mantenerme conectado</label>
         </div>
         <div class="col-md-4"> 
-            <button type="submit" class="btn btn-primary m-4">Iniciar sesion </button>
+            <button type="submit" class="btn btn-primary m-4 ">Iniciar sesion </button>
         </div>
         {if $error} 
             <div class="alert alert-danger mt-3">
@@ -29,7 +29,7 @@
             </div>
         {/if}
 
-        <div class="ml-3"> 
+        <div class="col-md-3 form-check"> 
             <span>No tenes cuenta? <a href="registrar-usuario"> Registrarse </a> </span>
         </div>
     </form>
