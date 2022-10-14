@@ -12,18 +12,6 @@ class ClientModel extends Model {
 
     }
 
-    public function getAllClient() {
-        // 2. ejecuto la sentencia (2 subpasos)
-        $query = $this->db->prepare("SELECT * FROM client");
-        $query->execute();
-
-        // 3. obtengo los resultados
-        $Client = $query->fetchAll(PDO::FETCH_OBJ); // devuelve un arreglo de objetos
-        
-        return $Client;
-    }
-
-
     public function getClientById($id){
         $query = $this->db->prepare("SELECT* FROM client WHERE client.id_client =?");
         $query->execute([$id]);

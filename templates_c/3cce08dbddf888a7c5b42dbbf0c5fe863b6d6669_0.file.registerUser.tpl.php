@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-14 03:22:39
+/* Smarty version 4.2.1, created on 2022-10-14 17:03:59
   from 'C:\xampp\htdocs\Tpweb2\templates\registerUser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6348b9dfad4670_08957200',
+  'unifunc' => 'content_63497a5fca1db1_56412930',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3cce08dbddf888a7c5b42dbbf0c5fe863b6d6669' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerUser.tpl',
-      1 => 1665582502,
+      1 => 1665759838,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6348b9dfad4670_08957200 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63497a5fca1db1_56412930 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('props'=>$_smarty_tpl->tpl_vars['props']->value), 0, false);
 ?>
 
@@ -40,16 +40,26 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
       <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
       <div id="emailHelp" class="form-text">Nunca vamos a compartir su direccion E-mail con nadie</div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-3">
       <label for="exampleInputPassword1" class="form-label">Contraseña</label>
       <input type="password" class="form-control" id="exampleInputPassword1" name="password"  required>
     </div>
-    <div class="col-md-4">
-      <label for="exampleInputPassword1" class="form-label">Ingrese su id de cliente en el banco</label>
-      <input type="number" class="form-control" id="exampleInputPassword1" name="id_user"  required>
-      <p>Nota: Para poder abrir una cuenta de usuario, debe ser cliente del banco previamente </p>
-    </div>
-    <div class="form-check">
+    <select class="form-select-m3" aria-label="Default select example" name='id_client' required>
+                    <option selected>Seleccionar cliente</option>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['clients']->value, 'client');
+$_smarty_tpl->tpl_vars['client']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['client']->value) {
+$_smarty_tpl->tpl_vars['client']->do_else = false;
+?>
+                        <option value="<?php echo $_smarty_tpl->tpl_vars['client']->value->id_client;?>
+"><?php echo $_smarty_tpl->tpl_vars['client']->value->alias;?>
+</option>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+    </select>
+    <div class="form-check mt-3">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
         Acepto los terminos y condiciones

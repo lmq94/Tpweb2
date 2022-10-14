@@ -14,16 +14,17 @@
       <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
       <div id="emailHelp" class="form-text">Nunca vamos a compartir su direccion E-mail con nadie</div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-3">
       <label for="exampleInputPassword1" class="form-label">Contraseña</label>
       <input type="password" class="form-control" id="exampleInputPassword1" name="password"  required>
     </div>
-    <div class="col-md-4">
-      <label for="exampleInputPassword1" class="form-label">Ingrese su id de cliente en el banco</label>
-      <input type="number" class="form-control" id="exampleInputPassword1" name="id_user"  required>
-      <p>Nota: Para poder abrir una cuenta de usuario, debe ser cliente del banco previamente </p>
-    </div>
-    <div class="form-check">
+    <select class="form-select-m3" aria-label="Default select example" name='id_client' required>
+                    <option selected>Seleccionar cliente</option>
+                    {foreach from=$clients item=$client}
+                        <option value="{$client->id_client}">{$client->alias}</option>
+                    {/foreach}
+    </select>
+    <div class="form-check mt-3">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label" for="invalidCheck">
         Acepto los terminos y condiciones

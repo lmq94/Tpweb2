@@ -11,11 +11,13 @@ class ControlerUser extends Controler{
     public function __construct(){
 
             parent::__construct(new UserModel,new UserView());
+            $this->clientModel= new ClientModel();
         }
 
 
     public function agregarUsuario(){
-        $this->view->formularioUsuario();
+        $clients= $this->model->getAllItems("client");
+        $this->view->formularioUsuario($clients);
     }
 
     public function menuLogin(){

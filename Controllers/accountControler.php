@@ -25,13 +25,13 @@ class ControlerAccount extends Controler{
 
     public function bankAccounts($editAccount=false,$id_account=null) {
         if(helper::checkAdmin ()){
-            $accounts = $this->model->getBankaccounts();
+            $accounts = $this->model->getAllItems("account");
             $this->view->showAccounts($accounts,$editAccount,$id_account);
         }
     }
 
     function accountForm(){
-        $clients=$this->clientModel->getAllClient();
+        $clients=$this->clientModel->getAllItems("client");
         $this->view->showForm($clients);
         
     }

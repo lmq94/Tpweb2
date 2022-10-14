@@ -26,7 +26,7 @@ class ControlerClient extends Controler{
     
     public function showClient($editClient=false, $id_client=null) {
         if(helper::checkAdmin ()){
-            $clients = $this->model->getAllClient();
+            $clients = $this->model->getAllItems("client");
             $this->view->showClients($clients, $editClient, $id_client); }
         else
             $this->redirect("home");

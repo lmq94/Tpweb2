@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 20:49:01
+/* Smarty version 4.2.1, created on 2022-10-14 17:32:11
   from 'C:\xampp\htdocs\Tpweb2\templates\loginMenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63485d9d98e290_12758911',
+  'unifunc' => 'content_634980fb4eb0a2_54888058',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '235287a3158e1a18c02e542d1df5927292134dfc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\loginMenu.tpl',
-      1 => 1665582707,
+      1 => 1665761529,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63485d9d98e290_12758911 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634980fb4eb0a2_54888058 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -61,7 +61,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         </div>
     </form>
 
-    <div class="col">
+    <div>
             <img src="Images\logo-municipalidad-Gesell.jpeg" alt="foto-login">
     </div> 
 </div>

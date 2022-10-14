@@ -34,7 +34,7 @@
         </div>
     </form>
 
-    <div class="col">
+    <div>
             <img src="Images\logo-municipalidad-Gesell.jpeg" alt="foto-login">
     </div> 
 </div>

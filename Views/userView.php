@@ -18,7 +18,8 @@ class UserView extends View {
 
     }
 
-   function formularioUsuario(){
+   function formularioUsuario($clients){
+        $this->smarty->assign('clients', $clients);
         $this->smarty->display('registerUser.tpl');
 
    }

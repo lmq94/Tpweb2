@@ -11,4 +11,17 @@ class Model {
     }
 
 
+    public function getAllItems($nombreTabla) {
+        // 2. ejecuto la sentencia (2 subpasos)
+        $query = $this->db->prepare("SELECT * FROM $nombreTabla");
+        $query->execute();
+
+        // 3. obtengo los resultados
+        $item = $query->fetchAll(PDO::FETCH_OBJ); // devuelve un arreglo de objetos
+        
+        return $item;
+    }
+
+
+
 }
