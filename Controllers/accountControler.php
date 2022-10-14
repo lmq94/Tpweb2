@@ -18,6 +18,8 @@ class ControlerAccount extends Controler{
             $Accounts = $this->model->getAllAccountsbyClient($id_client);
             $this->view->showAccounts($Accounts);
         }
+        else
+            $this->redirect("home");
     }
 
     public function bankAccounts($editAccount=false,$id_account=null) {
@@ -31,6 +33,13 @@ class ControlerAccount extends Controler{
         $clients=$this->clientModel->getAllItems("client");
         $this->view->showForm($clients);
         
+    }
+
+    function redirectPanel($id_client){
+        if(helper::checkAdmin ())
+            $this->redirect("show-accounts");
+        else
+            $this->redirect("client-accounts/$id_client");
     }
 
 
@@ -47,7 +56,8 @@ class ControlerAccount extends Controler{
         $coin = $_POST['coin'];
 
         $this->model->CreateAccount($id_client, $amount,$type_account, $coin);
-        $this->redirect("show-accounts/$id_client");
+        $this->redirectPanel($id_client);
+
     }
 
         
@@ -58,7 +68,8 @@ class ControlerAccount extends Controler{
         $coin = $_POST['coin'];
 
         $this->model->updateAccount($id_account, $coin, $amount, $type_account);
-        $this->redirect("show-accounts");
+        $id_client= $_SESSION["client"]->id_client;
+        $this->redirectPanel($id_client);
 
     }
 
@@ -68,7 +79,7 @@ class ControlerAccount extends Controler{
     function deleteAccount($id) {
         $this->model->deleteAccountId($id);
         $id_client= $_SESSION['id_client'];
-        $this->redirect("show-accounts/$id_client");
+        $this->redirectPanel($id_client);
     }
 
 

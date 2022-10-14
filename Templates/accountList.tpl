@@ -41,7 +41,10 @@
               <td>{$account->amount}</td>
               <td>{$account->type_account}</td>
               <td>{$account->coin}</td>
-              <td class="d-flex">  <a href='edit-account/{$account->id_account}' type='button' class='btn btn-primary mx-3 mt-3 m-3'>Editar Cuenta</a>
+              <td class="d-flex">
+                        {if $smarty.session.user->rol == "admin" } 
+                          <a href='edit-account/{$account->id_account}' type='button' class='btn btn-primary mx-3 mt-3 m-3'>Editar Cuenta</a>
+                        {/if}
                           <a href='delete-account/{$account->id_account}' type='button' class='btn btn-danger mx-3 mt-3 m-3'>Eliminar cuenta</a>
             {/if}
             

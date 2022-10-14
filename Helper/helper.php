@@ -7,7 +7,7 @@ class Helper {
     }
 
      public static function checkAdmin () {
-        if ($_SESSION['login']){
+        if (isset($_SESSION['login'])){
             if (isset($_SESSION['user']->rol) && $_SESSION['user']->rol == "admin") 
                 { session_abort(); 
                 return true;}
@@ -30,9 +30,8 @@ class Helper {
     }
 
 
-
     public static function verify($id){
-        if ($id==$_SESSION['id_client'])
+        if ($id==isset($_SESSION['id_client']))
             return true;
         else
             return false;

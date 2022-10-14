@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 20:49:15
+/* Smarty version 4.2.1, created on 2022-10-14 21:36:05
   from 'C:\xampp\htdocs\Tpweb2\templates\AccountList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63485dabaf8e63_67973730',
+  'unifunc' => 'content_6349ba25cf1699_61731865',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '085bbdc9942dc84874eda9ed2165be749b0b3c79' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\AccountList.tpl',
-      1 => 1665686489,
+      1 => 1665776162,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63485dabaf8e63_67973730 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6349ba25cf1699_61731865 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -80,8 +80,11 @@ $_smarty_tpl->tpl_vars['account']->do_else = false;
 </td>
               <td><?php echo $_smarty_tpl->tpl_vars['account']->value->coin;?>
 </td>
-              <td class="d-flex">  <a href='edit-account/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
+              <td class="d-flex">
+                        <?php if ($_SESSION['user']->rol == "admin") {?> 
+                          <a href='edit-account/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
 ' type='button' class='btn btn-primary mx-3 mt-3 m-3'>Editar Cuenta</a>
+                        <?php }?>
                           <a href='delete-account/<?php echo $_smarty_tpl->tpl_vars['account']->value->id_account;?>
 ' type='button' class='btn btn-danger mx-3 mt-3 m-3'>Eliminar cuenta</a>
             <?php }?>

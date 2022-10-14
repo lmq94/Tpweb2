@@ -18,7 +18,7 @@
       <label for="exampleInputPassword1" class="form-label">Contraseña</label>
       <input type="password" class="form-control" id="exampleInputPassword1" name="password"  required>
     </div>
-    <select class="form-select-m3" aria-label="Default select example" name='id_client' required>
+    <select class="form-select-m3" aria-label="Default select example" name='id_client'>
                     <option selected>Seleccionar cliente</option>
                     {foreach from=$clients item=$client}
                         <option value="{$client->id_client}">{$client->alias}</option>
