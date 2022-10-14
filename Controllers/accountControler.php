@@ -7,9 +7,6 @@ require_once "./Helper/helper.php";
 
 class ControlerAccount extends Controler{
 
-     private ClientModel $clientModel;
-   
-
     public function __construct(){
             parent::__construct(new AccountModel,new AccountView());
             $this->clientModel= new ClientModel();
