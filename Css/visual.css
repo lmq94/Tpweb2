@@ -18,8 +18,11 @@ html, body {
 
 footer p {
     text-align: center;
-    background-color:cornflowerblue;
     margin: 0;
+}
+
+header {
+    background-color:cornflowerblue;
 }
 
 
@@ -34,7 +37,7 @@ header img {
 }
 
 
-.form-alta{
+.form-alta {
     justify-items: center;
 }
 

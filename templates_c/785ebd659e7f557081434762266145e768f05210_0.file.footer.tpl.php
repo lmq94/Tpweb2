@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 20:49:01
+/* Smarty version 4.2.1, created on 2022-10-15 16:56:46
   from 'C:\xampp\htdocs\Tpweb2\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63485d9d9b2c19_27301254',
+  'unifunc' => 'content_634aca2e717c24_12850070',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '785ebd659e7f557081434762266145e768f05210' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\footer.tpl',
-      1 => 1665070485,
+      1 => 1665845801,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63485d9d9b2c19_27301254 (Smarty_Internal_Template $_smarty_tpl) {
-?>        </main>
+function content_634aca2e717c24_12850070 (Smarty_Internal_Template $_smarty_tpl) {
+?>                </main>
 <!-- fin main container -->
-        <footer>
-                <p> Banco de Gesell 2022 ©</p>
-        </footer>
+                <footer class="bg-primary">
+                        <p> Banco de Gesell 2022 ©</p>
+                </footer>
 
-        <?php echo '<script'; ?>
+                <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-    </body>
+        </body>
 
 </html>
 <?php }
