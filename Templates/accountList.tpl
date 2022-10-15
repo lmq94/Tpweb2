@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-<div class="d-flex">
+<div class="d-flex ">
 
   {include file="panel.tpl"}
 

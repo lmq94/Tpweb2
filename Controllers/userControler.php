@@ -46,7 +46,7 @@ class ControlerUser extends Controler{
             
          }
          else {
-            $this->view->showmeLogin("la contraseña ingresada es incorrecta");
+            $this->view->showmeLogin("Los datos ingresados son incorrectos");
          }
     }
 

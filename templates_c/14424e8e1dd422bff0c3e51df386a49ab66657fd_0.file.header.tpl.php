@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-15 16:38:09
+/* Smarty version 4.2.1, created on 2022-10-15 18:00:48
   from 'C:\xampp\htdocs\Tpweb2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634ac5d1ab9a93_59489761',
+  'unifunc' => 'content_634ad930380e78_92942171',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14424e8e1dd422bff0c3e51df386a49ab66657fd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\header.tpl',
-      1 => 1665844548,
+      1 => 1665849647,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634ac5d1ab9a93_59489761 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634ad930380e78_92942171 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,7 +39,7 @@ Css/visual.css">
   <body>
       <header>
           <img src="./Images/VillaGesell.jpg">
-          <nav class="navbar navbar-expand-lg bg-light">
+          <nav class="navbar navbar-expand-lg bg-primary">
               <div class="container-fluid">
                 <a class="navbar-brand" >Banco de Gesell</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +65,7 @@ Css/visual.css">
       </header>
 
       <!-- inicio main container -->
-      <main class="main-container">
+      <main class="main-container bank-image ">
 
 <?php }
 }

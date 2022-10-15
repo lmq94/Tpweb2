@@ -15,6 +15,13 @@ html, body {
    justify-items: center;
 }
 
+.bank-image {
+    background-image: url(".\Images\background-bank.jpg"); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+  }
+
 
 footer p {
     text-align: center;
@@ -22,7 +29,7 @@ footer p {
 }
 
 header {
-    background-color:cornflowerblue;
+    width:100%;
 }
 
 
@@ -38,7 +45,7 @@ header img {
 
 
 .form-alta {
-    justify-items: center;
+    justify-content: center;
 }
 
 .main-container img{

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-14 17:27:10
+/* Smarty version 4.2.1, created on 2022-10-15 17:55:17
   from 'C:\xampp\htdocs\Tpweb2\templates\registerAccount.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63497fce70bd59_90664454',
+  'unifunc' => 'content_634ad7e59e8004_43003916',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14814bc0d3b760be782598fe629af328885a6e87' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerAccount.tpl',
-      1 => 1665761228,
+      1 => 1665847868,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63497fce70bd59_90664454 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634ad7e59e8004_43003916 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -31,7 +31,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         <?php $_smarty_tpl->_subTemplateRender("file:panel.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-
+    <div class="container mb-3 ">
         <form class="container-md" action="open-account" method="POST">
             <?php if ($_SESSION['user']->rol == "admin") {?>
                 <h4> Seleccione un cliente</h4>
@@ -95,7 +95,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php if (!($_SESSION['user']->rol == "admin")) {?>
                 <h3 class="mt-3"> Importante: Esta cuenta tendra como titular al cliente asociado al usuario</h3>
             <?php }?>
-        </form>  
+        </form>
+    </div>  
         
   
 

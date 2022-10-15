@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-14 20:21:58
+/* Smarty version 4.2.1, created on 2022-10-15 17:25:43
   from 'C:\xampp\htdocs\Tpweb2\templates\ClientsList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6349a8c648cca6_07267458',
+  'unifunc' => 'content_634ad0f7a1daa2_57394137',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a3f01bb93979ddb8faa4fd707113c3cbcdec6dd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\ClientsList.tpl',
-      1 => 1665771714,
+      1 => 1665847473,
       2 => 'file',
     ),
   ),
@@ -23,11 +23,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6349a8c648cca6_07267458 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634ad0f7a1daa2_57394137 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-    <div class="d-flex">
+    <div class="d-flex ">
       
     <?php $_smarty_tpl->_subTemplateRender("file:panel.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

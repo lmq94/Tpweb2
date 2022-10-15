@@ -14,7 +14,7 @@
   <body>
       <header>
           <img src="./Images/VillaGesell.jpg">
-          <nav class="navbar navbar-expand-lg bg-light">
+          <nav class="navbar navbar-expand-lg bg-primary">
               <div class="container-fluid">
                 <a class="navbar-brand" >Banco de Gesell</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,5 +40,5 @@
       </header>
 
       <!-- inicio main container -->
-      <main class="main-container">
+      <main class="main-container bank-image ">
 

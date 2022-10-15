@@ -3,7 +3,7 @@
 
         {include file="panel.tpl"}
 
-
+    <div class="container mb-3 bg-light ">
         <form class="container-md" action="open-account" method="POST">
             {if $smarty.session.user->rol=="admin"}
                 <h4> Seleccione un cliente</h4>
@@ -58,7 +58,8 @@
             {if !($smarty.session.user->rol=="admin")}
                 <h3 class="mt-3"> Importante: Esta cuenta tendra como titular al cliente asociado al usuario</h3>
             {/if}
-        </form>  
+        </form>
+    </div>  
         
   
 

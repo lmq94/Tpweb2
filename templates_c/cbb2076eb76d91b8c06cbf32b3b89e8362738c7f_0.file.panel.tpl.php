@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 20:49:10
+/* Smarty version 4.2.1, created on 2022-10-15 20:10:51
   from 'C:\xampp\htdocs\Tpweb2\templates\panel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63485da6e9adb1_97990441',
+  'unifunc' => 'content_634af7ab8dc787_66625107',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbb2076eb76d91b8c06cbf32b3b89e8362738c7f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\panel.tpl',
-      1 => 1665504434,
+      1 => 1665857450,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63485da6e9adb1_97990441 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634af7ab8dc787_66625107 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-<div class="container p-3">
+<div class="container p-3 bg-light">
 
     <button class="btn btn-success mx-3 mt-3 m-3" data-bs-toggle="offcanvas" data-bs-target="#intro">Menu de usuario</button>
 

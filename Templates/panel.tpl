@@ -1,6 +1,6 @@
 
 
-<div class="container p-3">
+<div class="container p-3 bg-light">
 
     <button class="btn btn-success mx-3 mt-3 m-3" data-bs-toggle="offcanvas" data-bs-target="#intro">Menu de usuario</button>
 
