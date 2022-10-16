@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-15 17:53:13
+/* Smarty version 4.2.1, created on 2022-10-16 00:50:05
   from 'C:\xampp\htdocs\Tpweb2\templates\registerClient.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634ad769e3b676_86768937',
+  'unifunc' => 'content_634b391db14764_69061942',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c23985a5249eb29196a743f1eeb65be5a2871dc5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\registerClient.tpl',
-      1 => 1665847873,
+      1 => 1665857432,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634ad769e3b676_86768937 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634b391db14764_69061942 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -31,7 +31,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 ?>
 
 
-<div class="container mb-3 ">
+<div class="container mb-3 bg-light">
   <h4>Registrar cliente</h4>
   <form class="row g-3" action='activation-client' method="POST">
     <div class="col-md-4">

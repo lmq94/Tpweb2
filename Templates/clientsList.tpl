@@ -1,13 +1,13 @@
 {include file="header.tpl"}
 
-    <div class="d-flex ">
+    <div class="container table-responsive bg-light">
       
     {include file="panel.tpl"}
 
       <div class="container ">
         <h3>Clientes registrados en el banco </h3>
 
-          <table class="table table-bordered">
+          <table class="table table-bordered bg-info">
             <thead>
               <tr>
                 <th scope="col">Dni</th>

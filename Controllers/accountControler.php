@@ -9,7 +9,7 @@ class ControlerAccount extends Controler{
 
     public function __construct(){
             parent::__construct(new AccountModel,new AccountView());
-            $this->clientModel= new ClientModel();
+            Helper::isLogged();
 
         }
     
@@ -30,7 +30,7 @@ class ControlerAccount extends Controler{
     }
 
     function accountForm(){
-        $clients=$this->clientModel->getAllItems("client");
+        $clients=$this->model->getAllItems("client");
         $this->view->showForm($clients);
         
     }

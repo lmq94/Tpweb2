@@ -20,7 +20,7 @@ class Helper {
             return false;}
     }
 
-    function isLogged() {
+    public static function isLogged() {
         session_start();
         if (!isset($_SESSION['login'])) {
             header("Location: " . BASE_URL . 'menu-login');
@@ -31,7 +31,7 @@ class Helper {
 
 
     public static function verify($id){
-        if ($id==isset($_SESSION['id_client']))
+        if ($_SESSION['id_client']== $id )
             return true;
         else
             return false;

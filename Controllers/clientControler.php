@@ -12,8 +12,7 @@ class ControlerClient extends Controler{
 
     public function __construct(){
         parent::__construct(new ClientModel,new ClientView());
-        $helper = new Helper();
-        $helper->isLogged();
+        Helper::isLogged();
 
     
     }
