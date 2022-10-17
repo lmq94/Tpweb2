@@ -15,12 +15,6 @@ html, body {
    justify-items: center;
 }
 
-.bank-image {
-    background-image: url(".\Images\background-bank.jpg"); 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-  }
 
 
 footer p {
@@ -48,10 +42,10 @@ header img {
     justify-content: center;
 }
 
-.main-container img{
+#images{
     max-width: 200px;
-    max-height: 400px;
-    margin-left: 50px;
+    max-height: 200px;
+    margin-left: 100px;
    
 }
 

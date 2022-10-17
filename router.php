@@ -24,6 +24,9 @@ switch ($params[0]) {
     case 'home':
         $userControler->showHome();
         break;
+    case 'about':
+        $userControler->showAbout();
+        break;
     case 'registrar-usuario':
         $userControler->agregarUsuario();
         break;

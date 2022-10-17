@@ -26,7 +26,7 @@
                       <a class="nav-link" aria-current="page" href="">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="">About</a>
+                      <a class="nav-link" aria-current="page" href="about">About</a>
                     </li>
                       {if !$props.islogged}
                         <li class="nav-item">
@@ -40,5 +40,5 @@
       </header>
 
       <!-- inicio main container -->
-      <main class="main-container bank-image ">
+      <main class="main-container">
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-15 20:09:51
+/* Smarty version 4.2.1, created on 2022-10-16 17:12:58
   from 'C:\xampp\htdocs\Tpweb2\templates\loginMenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634af76fe65b38_26925156',
+  'unifunc' => 'content_634c1f7a490786_72284976',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '235287a3158e1a18c02e542d1df5927292134dfc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\loginMenu.tpl',
-      1 => 1665857389,
+      1 => 1665933176,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634af76fe65b38_26925156 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634c1f7a490786_72284976 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -31,7 +31,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
 
 
-<div class=" container  bg-light">
+<div class="container mt-4 bg-light">
 
     <form class=" container justify-content-center m-4" action=verify method="POST">
         <h4> Bienvenido al banco de Gesell </h2>

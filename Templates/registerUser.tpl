@@ -1,7 +1,7 @@
 {include file="header.tpl" props=$props}
 
 
-<div class="container mb-3 bg-light">
+<div class="container mt-3 mb-3 bg-light">
   <h3>Ingrese los siguientes datos para crear su usuario </h3>
 
   <form class="form-alta m-4" action='insertar-usuario' method="POST">

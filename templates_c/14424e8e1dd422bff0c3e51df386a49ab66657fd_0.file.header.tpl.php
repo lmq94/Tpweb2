@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-15 18:00:48
+/* Smarty version 4.2.1, created on 2022-10-17 17:25:12
   from 'C:\xampp\htdocs\Tpweb2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634ad930380e78_92942171',
+  'unifunc' => 'content_634d73d84b3d69_30532479',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '14424e8e1dd422bff0c3e51df386a49ab66657fd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\header.tpl',
-      1 => 1665849647,
+      1 => 1666020306,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634ad930380e78_92942171 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634d73d84b3d69_30532479 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,7 +51,7 @@ Css/visual.css">
                       <a class="nav-link" aria-current="page" href="">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="">About</a>
+                      <a class="nav-link" aria-current="page" href="about">About</a>
                     </li>
                       <?php if (!$_smarty_tpl->tpl_vars['props']->value['islogged']) {?>
                         <li class="nav-item">
@@ -65,7 +65,7 @@ Css/visual.css">
       </header>
 
       <!-- inicio main container -->
-      <main class="main-container bank-image ">
+      <main class="main-container">
 
 <?php }
 }

@@ -53,6 +53,10 @@ class ControlerUser extends Controler{
         $this->view->Home();
     }
 
+    function showAbout(){
+        $this->view->about();
+    }
+
     function showProfile(){
         $this->view->showprofile();
 

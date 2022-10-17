@@ -34,6 +34,10 @@ class UserView extends View {
         $this->smarty->display('home.tpl');
    }
 
+   function about(){
+    $this->smarty->display('about.tpl');
+   }
+
    function showProfile(){
     $this->smarty->display('PerfilUsuario.tpl');
    }
