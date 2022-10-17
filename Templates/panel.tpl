@@ -16,7 +16,7 @@
             {else}
                 <a href='client-accounts/{$smarty.session.user->id_client}'> <p>Tus cuentas</p></a>
             {/if}
-            <p>Configuracion</p>
+            <p>Configuracion (Proximamente)</p>
             <a href="close-sesion"><button class="btn btn-primary">Cerrar sesion</button></a>
         </div>
     </div>

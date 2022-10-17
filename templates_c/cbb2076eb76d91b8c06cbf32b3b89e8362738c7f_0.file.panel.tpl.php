@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-15 20:10:51
+/* Smarty version 4.2.1, created on 2022-10-17 21:12:23
   from 'C:\xampp\htdocs\Tpweb2\templates\panel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634af7ab8dc787_66625107',
+  'unifunc' => 'content_634da9176dc862_11905967',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbb2076eb76d91b8c06cbf32b3b89e8362738c7f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Tpweb2\\templates\\panel.tpl',
-      1 => 1665857450,
+      1 => 1666033940,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634af7ab8dc787_66625107 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634da9176dc862_11905967 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="container p-3 bg-light">
@@ -41,7 +41,7 @@ function content_634af7ab8dc787_66625107 (Smarty_Internal_Template $_smarty_tpl)
                 <a href='client-accounts/<?php echo $_SESSION['user']->id_client;?>
 '> <p>Tus cuentas</p></a>
             <?php }?>
-            <p>Configuracion</p>
+            <p>Configuracion (proximamente)</p>
             <a href="close-sesion"><button class="btn btn-primary">Cerrar sesion</button></a>
         </div>
     </div>
